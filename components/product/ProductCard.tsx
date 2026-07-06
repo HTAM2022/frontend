@@ -38,19 +38,19 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </span>
       </div>
 
-      <div className="p-6 flex flex-col flex-1">
+      <div className="min-w-0 p-5 sm:p-6 flex flex-col flex-1">
         {/* Social trust — no fake reviews */}
         <p className="text-xs font-semibold text-[#0F5C4A] mb-3 uppercase tracking-wider">
           Popular for blackout and home-security needs
         </p>
 
         {/* Product headline */}
-        <h3 className="font-bold text-xl text-[#111827] leading-tight mb-2">
+        <h3 className="break-words font-bold text-xl text-[#111827] leading-tight mb-2">
           {product.englishName}
         </h3>
 
         {/* Benefit subheading */}
-        <p className="text-sm text-[#4B5563] leading-relaxed mb-4 flex-1">
+        <p className="break-words text-sm text-[#4B5563] leading-relaxed mb-4 flex-1">
           {product.cardSubheading}
         </p>
 
@@ -59,16 +59,16 @@ export function ProductCard({ product, className }: ProductCardProps) {
           {product.benefits.slice(0, 3).map((bullet) => (
             <li
               key={bullet}
-              className="flex items-start gap-2 text-sm text-[#1F2937] font-medium"
+              className="flex min-w-0 items-start gap-2 text-sm text-[#1F2937] font-medium"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#0F5C4A] flex-shrink-0 mt-1.5" />
-              {bullet}
+              <span className="min-w-0 break-words">{bullet}</span>
             </li>
           ))}
         </ul>
 
         {/* Price + CTA */}
-        <div className="flex items-center justify-between gap-3 mt-auto pt-4 border-t border-[#E5E7EB]/70">
+        <div className="flex flex-col gap-3 mt-auto pt-4 border-t border-[#E5E7EB]/70 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col">
             <span className="text-xs text-[#4B5563] font-medium">from</span>
             <span className="text-xl font-bold text-[#0F5C4A]">{formatKes(basePrice)}</span>

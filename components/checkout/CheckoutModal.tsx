@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils"
 
 const schema = z.object({
   fullName: z.string().min(2, "Enter your full name.").max(100, "Name is too long"),
+  city: z.string().min(2, "Enter your city or town.").max(100, "City name is too long"),
   phone: z
     .string()
     .min(9, "Enter a valid Kenyan mobile number, e.g. 0712 345 678 or +254 712 345 678.")
@@ -75,6 +76,7 @@ export function CheckoutModal() {
       const payload = {
         customer: {
           name: values.fullName.trim(),
+          city: values.city.trim(),
           phone: normalizedPhone,
         },
         items: orderItems,
@@ -227,6 +229,29 @@ export function CheckoutModal() {
                 {errors.fullName && (
                   <p role="alert" className="text-xs text-red-500">
                     {errors.fullName.message}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-1">
+                <label htmlFor="city" className="text-sm font-medium text-[#1F2937] block">
+                  City / Town
+                </label>
+                <input
+                  id="city"
+                  type="text"
+                  placeholder="e.g. Nairobi, Mombasa, Kisumu"
+                  className={cn(
+                    "w-full px-4 py-3 rounded-xl border text-[#111827] placeholder:text-[#4B5563]/50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0F5C4A] transition",
+                    errors.city
+                      ? "border-red-400 focus:ring-red-400"
+                      : "border-[#E5E7EB] focus:border-[#0F5C4A]",
+                  )}
+                  {...register("city")}
+                />
+                {errors.city && (
+                  <p role="alert" className="text-xs text-red-500">
+                    {errors.city.message}
                   </p>
                 )}
               </div>

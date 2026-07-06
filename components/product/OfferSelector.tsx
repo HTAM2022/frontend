@@ -41,7 +41,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
   }
 
   return (
-    <div className="space-y-5 text-left">
+    <div className="min-w-0 space-y-5 text-left">
       <p className="text-sm font-semibold text-charcoal">Choose your bundle:</p>
 
       {/* Offer cards */}
@@ -56,7 +56,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
               key={offer.quantity}
               onClick={() => setSelectedQty(product.id, offer.quantity as 1 | 2 | 3)}
               className={cn(
-                "w-full text-left border rounded-2xl p-4 transition-all duration-200 relative overflow-hidden",
+                "w-full min-w-0 text-left border rounded-2xl p-4 transition-all duration-200 relative",
                 isSelected
                   ? "border-emerald bg-softMint/60 ring-2 ring-emerald shadow-sm"
                   : "border-border bg-white hover:border-emerald/50 hover:bg-softMint/20",
@@ -64,10 +64,10 @@ export function OfferSelector({ product }: OfferSelectorProps) {
               aria-pressed={isSelected}
             >
               {isSelected && (
-                <div className="absolute top-0 left-0 w-1 h-full bg-emerald" />
+                <div className="absolute top-0 left-0 w-1 h-full bg-emerald rounded-l-2xl" />
               )}
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
+              <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex min-w-0 items-start gap-3">
                   {/* Radio indicator */}
                   <div
                     className={cn(
@@ -78,9 +78,9 @@ export function OfferSelector({ product }: OfferSelectorProps) {
                     {isSelected && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
                   </div>
 
-                  <div>
+                  <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <span className="font-bold text-sm text-ink">
+                      <span className="min-w-0 break-words font-bold text-sm text-ink">
                         {offer.label} — {bundleLabel}
                       </span>
                     </div>
@@ -95,7 +95,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
                   </div>
                 </div>
 
-                <div className="text-right flex-shrink-0 flex flex-col items-end">
+                <div className="flex flex-col items-start pl-8 text-left sm:flex-shrink-0 sm:items-end sm:pl-0 sm:text-right">
                   <p className="font-bold text-ink text-lg leading-none mb-1.5">
                     {formatKes(offer.priceKes)}
                   </p>

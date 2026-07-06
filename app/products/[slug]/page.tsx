@@ -60,11 +60,11 @@ export default async function ProductPage({ params }: PageProps) {
   return (
     <>
       {/* 1. Product hero */}
-      <section className="bg-white py-8 px-4 pb-28 md:pb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+      <section className="bg-white py-8 px-4 pb-28 md:pb-12 overflow-x-hidden">
+        <div className="max-w-6xl mx-auto overflow-hidden">
+          <div className="grid min-w-0 grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Gallery */}
-            <div>
+            <div className="min-w-0">
               <ProductGallery
                 productName={product.englishName}
                 images={product.images}
@@ -72,22 +72,22 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
 
             {/* Offer panel */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-xs text-bodyGray font-medium mb-2">
+            <div className="min-w-0 space-y-6">
+              <div className="min-w-0">
+                <p className="text-xs text-bodyGray font-medium mb-2 break-words">
                   <Link href="/collections" className="hover:text-emerald transition-colors">Shop</Link>
                   {" / "}
                   {product.englishName}
                 </p>
-                <p className="text-sm text-bodyGray italic mb-2">{product.swahiliName}</p>
-                <h1 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight mb-2">
+                <p className="text-sm text-bodyGray italic mb-2 break-words">{product.swahiliName}</p>
+                <h1 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight mb-2 break-words">
                   {product.englishName}
                 </h1>
-                <p className="text-lg text-bodyGray font-medium">{product.shortHeadline}</p>
+                <p className="text-lg text-bodyGray font-medium break-words">{product.shortHeadline}</p>
               </div>
 
               {/* Price from */}
-              <div className="flex items-baseline gap-2 bg-softMint/60 p-4 rounded-xl border border-emerald/10">
+              <div className="flex flex-wrap items-baseline gap-2 bg-softMint/60 p-4 rounded-xl border border-emerald/10">
                 <span className="text-sm text-bodyGray font-medium">from</span>
                 <span className="text-3xl font-sora font-bold text-emerald">
                   {formatKes(baseOffer.priceKes)}
@@ -132,8 +132,8 @@ export default async function ProductPage({ params }: PageProps) {
       <ProductStory productName={product.englishName} />
 
       {/* 3. Benefits section */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-white py-20 px-4 overflow-x-hidden">
+        <div className="max-w-4xl mx-auto overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="font-sora font-bold text-3xl text-ink mb-3">
               What it does for you
@@ -155,8 +155,8 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 4. Specs table */}
-      <section className="bg-cream py-16 px-4 border-t border-border">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-cream py-16 px-4 border-t border-border overflow-x-hidden">
+        <div className="max-w-3xl mx-auto overflow-hidden">
           <h2 className="font-sora font-bold text-3xl text-ink mb-8 text-center">
             Product Specifications
           </h2>
@@ -182,8 +182,8 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 5. Bundle value */}
-      <section className="bg-white py-16 px-4 border-t border-border">
-        <div className="max-w-2xl mx-auto">
+      <section className="bg-white py-16 px-4 border-t border-border overflow-x-hidden">
+        <div className="max-w-2xl mx-auto overflow-hidden">
           <div className="text-center mb-8">
             <h2 className="font-sora font-bold text-3xl text-ink mb-3">
               Choose the setup that matches your home or business
@@ -197,8 +197,8 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 6. Use cases */}
-      <section className="bg-cream py-16 px-4 border-t border-border">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-cream py-16 px-4 border-t border-border overflow-x-hidden">
+        <div className="max-w-4xl mx-auto overflow-hidden">
           <h2 className="font-sora font-bold text-3xl text-ink mb-8 text-center">
             Where it works
           </h2>
@@ -230,8 +230,8 @@ export default async function ProductPage({ params }: PageProps) {
       <TrustStrip />
 
       {/* 9. Final CTA */}
-      <section className="bg-emerald text-white py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="bg-emerald text-white py-20 px-4 overflow-x-hidden">
+        <div className="max-w-3xl mx-auto text-center overflow-hidden">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wide">
             <ShieldCheck className="w-4 h-4" />
             30-Day Risk-Free Warranty included
