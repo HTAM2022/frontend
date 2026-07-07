@@ -1,13 +1,14 @@
+import Image from "next/image"
 import Link from "next/link"
-import { Zap, Sun, BatteryCharging, Package } from "lucide-react"
+import { Lightbulb, Sun, BellRing, Package } from "lucide-react"
 import type { Product } from "@/types/commerce"
 import { formatKes } from "@/lib/money"
 import { cn } from "@/lib/utils"
 
 const PRODUCT_ICONS: Record<string, React.ElementType> = {
-  lamp: Zap,
+  bulb: Lightbulb,
   solar: Sun,
-  powerstation: BatteryCharging,
+  alarm: BellRing,
 }
 
 interface ProductCardProps {
@@ -18,6 +19,7 @@ interface ProductCardProps {
 export function ProductCard({ product, className }: ProductCardProps) {
   const basePrice = product.basePriceKes
   const Icon = PRODUCT_ICONS[product.id] ?? Package
+  const heroImage = product.images?.[0]
 
   return (
     <article
@@ -26,14 +28,26 @@ export function ProductCard({ product, className }: ProductCardProps) {
         className,
       )}
     >
-      {/* Image placeholder */}
+      {/* Product image */}
       <div className="w-full aspect-[4/3] bg-gradient-to-br from-[#E8F4EF] to-[#FFF8ED] flex flex-col items-center justify-center relative overflow-hidden">
-        <Icon className="w-20 h-20 text-[#0F5C4A] opacity-20 mb-3 group-hover:scale-110 transition-transform duration-500" />
-        <span className="text-xs font-bold tracking-widest text-[#0F5C4A] opacity-60 text-center px-4 uppercase">
-          {product.englishName}
-        </span>
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            alt={product.englishName}
+            fill
+            sizes="(min-width: 768px) 33vw, 100vw"
+            className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <>
+            <Icon className="w-20 h-20 text-[#0F5C4A] opacity-20 mb-3 group-hover:scale-110 transition-transform duration-500" />
+            <span className="text-xs font-bold tracking-widest text-[#0F5C4A] opacity-60 text-center px-4 uppercase">
+              {product.englishName}
+            </span>
+          </>
+        )}
         {/* COD badge */}
-        <span className="absolute top-4 left-4 bg-[#D99A29] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm">
+        <span className="absolute top-4 left-4 bg-[#D99A29] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm z-10">
           COD Available
         </span>
       </div>
@@ -41,7 +55,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       <div className="min-w-0 p-5 sm:p-6 flex flex-col flex-1">
         {/* Social trust — no fake reviews */}
         <p className="text-xs font-semibold text-[#0F5C4A] mb-3 uppercase tracking-wider">
-          Popular for blackout and home-security needs
+          Chosen for blackout, security, and personal-safety needs
         </p>
 
         {/* Product headline */}

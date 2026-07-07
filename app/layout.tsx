@@ -11,13 +11,13 @@ const sora = Sora({ subsets: ["latin"], variable: "--font-sora" })
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "RafaTools – Power & Security Tools for Kenya",
+  title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
   description:
-    "Premium backup power and security lighting essentials for Kenyan homes, shops, salons, and workspaces. Order online, confirm by phone, pay on delivery.",
+    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes, shops, and families. Order online, confirm by phone, pay on delivery.",
   openGraph: {
-    title: "RafaTools – Power & Security Tools for Kenya",
+    title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
     description:
-      "Premium backup power and security lighting essentials for Kenyan homes, shops, salons, and workspaces.",
+      "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes and families.",
     url: "https://rafatools.online",
     siteName: "RafaTools",
     locale: "en_KE",

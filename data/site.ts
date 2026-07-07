@@ -1,10 +1,10 @@
 export const SITE = {
   name: "RafaTools",
-  tagline: "Power & Security Tools",
-  promise: "Power and safety essentials for Kenyan homes.",
-  metaTitle: "RafaTools – Power & Security Tools for Kenya",
+  tagline: "Power & Safety Tools",
+  promise: "Emergency lighting, security, and personal safety essentials for Kenyan homes and families.",
+  metaTitle: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
   metaDescription:
-    "Premium backup power and security lighting essentials for Kenyan homes, shops, salons, and workspaces. Order online, confirm by phone, pay on delivery.",
+    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes, shops, and families. Order online, confirm by phone, pay on delivery.",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@rafatools.online",
   supportPhone: process.env.NEXT_PUBLIC_SUPPORT_PHONE ?? "",
   supportWhatsapp: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP ?? "",

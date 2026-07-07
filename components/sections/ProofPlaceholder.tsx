@@ -1,28 +1,33 @@
 import { Clock, MessageSquare } from "lucide-react"
 
+type Review = { initials: string; location: string; text: string }
+
 type Props = {
   title?: string
+  reviews?: Review[]
 }
 
-const PLACEHOLDER_REVIEWS = [
-  { 
-    initials: "JM", 
-    location: "Nairobi", 
-    text: '"As a mother, my biggest fear is the kids being in the dark when Stima goes. The delivery was fast, they called me, and I paid via M-Pesa on arrival. Now my kids do homework with no interruptions."'
+const DEFAULT_REVIEWS: Review[] = [
+  {
+    initials: "JM",
+    location: "Nairobi",
+    text: '"Delivery was fast, they called me before dispatch, and I paid only when the box was in my hands. Very safe process."',
   },
-  { 
-    initials: "AW", 
-    location: "Mombasa", 
-    text: '"My shop stays open 2 hours longer now. No need for noisy generators. The battery lasts the whole evening. Best purchase."'
+  {
+    initials: "AW",
+    location: "Mombasa",
+    text: '"Works exactly as promised. Would order again."',
   },
-  { 
-    initials: "FK", 
-    location: "Kisumu", 
-    text: '"I was skeptical about buying online, but they told me to pay ONLY when I see the package. It works exactly as advertised."'
+  {
+    initials: "FK",
+    location: "Kisumu",
+    text: '"I was skeptical about buying online, but pay-on-delivery removed all the risk. Now I recommend RafaTools to everyone."',
   },
 ]
 
-export function ProofPlaceholder({ title = "What Customers Are Saying" }: Props) {
+export function ProofPlaceholder({ title = "What Customers Are Saying", reviews }: Props) {
+  const displayReviews = reviews && reviews.length > 0 ? reviews : DEFAULT_REVIEWS
+
   return (
     <section className="bg-[#F8FAFC] py-16 border-y border-[#E5E7EB]/50">
       <div className="max-w-4xl mx-auto px-4">
@@ -38,7 +43,7 @@ export function ProofPlaceholder({ title = "What Customers Are Saying" }: Props)
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {PLACEHOLDER_REVIEWS.map((r, i) => (
+          {displayReviews.map((r, i) => (
             <div
               key={i}
               className="bg-white rounded-2xl border border-[#E5E7EB] p-6 flex flex-col gap-4 shadow-sm"

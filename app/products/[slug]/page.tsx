@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!product) return { title: "Product Not Found | RafaTools" }
 
   return {
-    title: `${product.englishName} | RafaTools – Power & Security Tools`,
+    title: `${product.englishName} | RafaTools – Power & Safety Tools`,
     description: `${product.cardSubheading} Pay on delivery. COD orders confirmed by phone before dispatch.`,
   }
 }
@@ -129,7 +129,7 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 2. Pain, Science & Authority Zigzag */}
-      <ProductStory productName={product.englishName} />
+      <ProductStory product={product} />
 
       {/* 3. Benefits section */}
       <section className="bg-white py-20 px-4 overflow-x-hidden">
@@ -221,7 +221,7 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 7. Social proof placeholder */}
-      <ProofPlaceholder title="What Customers Are Saying" />
+      <ProofPlaceholder title="What Customers Are Saying" reviews={product.reviews} />
 
       {/* 8. FAQ */}
       <Faq faqs={product.faqs} title="Common Questions" />

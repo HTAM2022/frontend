@@ -15,6 +15,18 @@ export type Product = {
   benefits: string[]
   useCases: { icon: string; label: string; text: string }[]
   faqs: { q: string; a: string }[]
+  story?: {
+    painBadge: string
+    painTitle: string
+    painCopy1: string
+    painCopy2: string
+    painPromise: string
+    scienceBadge: string
+    scienceTitle: string
+    scienceCopy: string
+    scienceBullets: { title: string; body: string }[]
+  }
+  reviews?: { initials: string; location: string; text: string }[]
 }
 
 export type CartItem = {

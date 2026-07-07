@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { CheckCircle2, Zap, Shield, Battery } from "lucide-react"
+import { CheckCircle2, Zap, Shield, Lightbulb, Sun, BellRing } from "lucide-react"
 
 export function Hero() {
   return (
@@ -10,16 +10,16 @@ export function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 bg-softMint text-emerald text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
               <Shield size={12} />
-              Power &amp; Security Tools for Kenya
+              Power &amp; Safety Tools for Kenya
             </div>
 
             <h1 className="font-sora font-bold text-ink text-4xl md:text-5xl leading-tight mb-5">
-              Stay Ready When Stima Goes Or Night Gets Dark
+              Stay Ready When Stima Cuts. Stay Safe When Night Falls.
             </h1>
 
             <p className="text-bodyGray text-lg mb-6 leading-relaxed">
-              Practical backup power and security lighting for Kenyan homes, shops, and workspaces.
-              Order online, confirm by phone, pay on delivery.
+              Emergency lighting, solar security, and personal safety essentials for Kenyan homes,
+              shops, and families. Order online, confirm by phone, pay on delivery.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -58,9 +58,9 @@ export function Hero() {
               <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-emerald to-deepEmerald flex flex-col items-center justify-center overflow-hidden shadow-xl">
                 <div className="grid grid-cols-3 gap-3 p-6 w-full">
                   {[
-                    { Icon: Zap, label: "Backup Lamp" },
-                    { Icon: Shield, label: "Solar Light" },
-                    { Icon: Battery, label: "Power Station" },
+                    { Icon: Lightbulb, label: "Emergency Bulb" },
+                    { Icon: Sun, label: "Solar Security" },
+                    { Icon: BellRing, label: "Safety Alarm" },
                   ].map(({ Icon, label }, i) => (
                     <div
                       key={i}
@@ -73,7 +73,7 @@ export function Hero() {
                 </div>
                 <div className="px-6 pb-6 w-full text-center">
                   <p className="text-white/80 text-sm">
-                    3 products. 1 mission: Keep your home and business running.
+                    3 products. 1 mission: Keep your home lit, secured, and your family safe.
                   </p>
                 </div>
               </div>

@@ -14,7 +14,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-sora font-bold text-white text-[15px]">RafaTools</div>
-                <div className="text-white/60 text-[11px]">Power &amp; Security Tools</div>
+                <div className="text-white/60 text-[11px]">Power &amp; Safety Tools</div>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">{SITE.promise}</p>
@@ -26,15 +26,15 @@ export function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <Link
-                  href="/products/lithium-blackout-battery-lamp"
+                  href="/products/rechargeable-emergency-led-bulb"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Battery Lamp
+                  Emergency LED Bulb
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/solar-motion-sensor-security-light"
+                  href="/products/solar-motion-security-light-1500lm"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
                   Solar Security Light
@@ -42,10 +42,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/products/portable-power-station-300w"
+                  href="/products/personal-safety-alarm-keychain"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Power Station 300W
+                  Personal Safety Alarm
                 </Link>
               </li>
               <li>

@@ -3,7 +3,7 @@ import { CheckCircle2, Shield, Banknote, Phone } from "lucide-react"
 import { SITE } from "@/data/site"
 
 export const metadata: Metadata = {
-  title: "About RafaTools – Power & Security for Kenya",
+  title: "About RafaTools – Power & Safety for Kenya",
   description:
     "RafaTools sells practical backup power and outdoor security lighting for Kenyan homes and businesses. Cash on Delivery only.",
 }
@@ -23,8 +23,8 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="font-sora font-bold text-ink text-4xl mb-4">About RafaTools</h1>
           <p className="text-bodyGray text-lg leading-relaxed">
-            {SITE.promise} We exist to help Kenyan homes and businesses stay ready for blackouts and
-            night security risks.
+            {SITE.promise} We exist to help Kenyan homes, businesses, and families stay ready for
+            blackouts, night-time security gaps, and personal safety risks.
           </p>
         </div>
       </section>
@@ -34,14 +34,16 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="font-sora font-bold text-ink text-2xl mb-4">Our Mission</h2>
           <p className="text-bodyGray leading-relaxed mb-4">
-            Power cuts happen without warning in Kenya. Dark compounds and gates create security gaps
-            at night. Most people do not have a backup plan because they assume it is expensive or
+            Power cuts happen without warning in Kenya. Dark compounds and gates create security
+            gaps at night. And women walking home after work should never have to feel unprotected.
+            Most families do not have a backup plan because they assume it is expensive or
             complicated to order.
           </p>
           <p className="text-bodyGray leading-relaxed mb-4">
-            RafaTools makes it easy and safe to order practical power backup and security lighting
-            products – with no upfront payment required. We use Cash on Delivery because we believe
-            customers should be able to see and receive their order before paying.
+            RafaTools makes it easy and safe to order practical emergency lighting, solar security,
+            and personal safety products – with no upfront payment required. We use Cash on
+            Delivery because we believe customers should be able to see and receive their order
+            before paying.
           </p>
           <p className="text-bodyGray leading-relaxed">
             Every order is confirmed by phone before dispatch. We call you to verify your name, phone

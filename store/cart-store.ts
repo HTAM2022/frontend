@@ -40,6 +40,19 @@ export const useCartStore = create<CartState>()(
       closeDrawer: () => set({ isDrawerOpen: false }),
       total: () => get().items.reduce((sum, i) => sum + i.totalPriceKes, 0),
     }),
-    { name: "rafa-cart" },
+    {
+      name: "rafa-cart",
+      version: 2,
+      migrate: () => ({
+        items: [],
+        isDrawerOpen: false,
+        addItem: () => {},
+        removeItem: () => {},
+        clearCart: () => {},
+        openDrawer: () => {},
+        closeDrawer: () => {},
+        total: () => 0,
+      }),
+    },
   ),
 )

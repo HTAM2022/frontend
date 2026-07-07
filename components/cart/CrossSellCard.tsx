@@ -1,6 +1,6 @@
 "use client"
 
-import { Plus, Zap, Sun, Battery } from "lucide-react"
+import { Plus, Lightbulb, Sun, BellRing } from "lucide-react"
 import { useCartStore } from "@/store/cart-store"
 import { formatKes } from "@/lib/money"
 import { addToCartId } from "@/lib/event-id"
@@ -16,15 +16,15 @@ type Props = {
 }
 
 const ICONS: Record<string, React.FC<{ size?: number; className?: string }>> = {
-  lamp: Zap,
+  bulb: Lightbulb,
   solar: Sun,
-  powerstation: Battery,
+  alarm: BellRing,
 }
 
 export function CrossSellCard({ productId, slug, name, shortHeadline, benefit, priceKes }: Props) {
   const addItem = useCartStore((s) => s.addItem)
 
-  const Icon = ICONS[productId] ?? Zap
+  const Icon = ICONS[productId] ?? Lightbulb
 
   function handleAdd() {
     const eventId = addToCartId(slug)

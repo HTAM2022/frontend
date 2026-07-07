@@ -10,16 +10,16 @@ import { PRODUCTS } from "@/data/products"
 import { HOME_FAQS } from "@/data/site"
 
 export const metadata: Metadata = {
-  title: "RafaTools – Stay Ready for Blackouts and Night Security | Kenya",
+  title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
   description:
-    "Backup power lamps, solar security lights, and portable power stations for Kenyan homes and shops. COD – pay on delivery.",
+    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes and families. COD – pay on delivery.",
 }
 
 const WHY_REASONS = [
   {
     Icon: Zap,
     title: "Purpose-built for Kenya",
-    desc: "Products chosen for Kenyan power conditions, blackout frequency, and outdoor security needs.",
+    desc: "Products chosen for Kenyan power conditions, night-time security needs, and personal safety realities.",
   },
   {
     Icon: Shield,
@@ -33,8 +33,8 @@ const WHY_REASONS = [
   },
   {
     Icon: Building2,
-    title: "Home and business ready",
-    desc: "Solutions that work for bedrooms, kitchens, shop counters, compounds, and salons.",
+    title: "Home, business, and family ready",
+    desc: "Solutions that work for bedrooms, shop counters, compounds, salons — and daughters walking home at night.",
   },
 ]
 
@@ -48,16 +48,16 @@ export default function HomePage() {
       <section className="bg-charcoal text-white py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-sora font-bold text-2xl md:text-3xl mb-5 leading-snug">
-            Stima goes without warning. Security gaps happen at night.
+            Stima cuts without warning. Compounds go dark. And walking home at night is not always safe.
           </h2>
           <p className="text-white/70 text-base leading-relaxed mb-6">
             When power cuts happen, you are left in the dark – literally. Children can&apos;t finish
-            homework. Shops lose customers. Work stops mid-meeting. And at night, dark gates and
-            compounds are a security risk.
+            homework. Shops lose customers. At night, dark gates invite trouble, and women walking
+            home after work should never feel alone.
           </p>
           <p className="text-white/90 font-semibold text-base">
-            RafaTools exists to solve these two problems with products that are affordable, practical,
-            and available on Cash on Delivery.
+            RafaTools solves these three problems with products that are practical, affordable, and
+            available on Cash on Delivery.
           </p>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <h2 className="font-sora font-bold text-ink text-3xl mb-3">Our Products</h2>
             <p className="text-bodyGray text-base max-w-lg mx-auto">
-              Three focused solutions for power backup and outdoor security.
+              Three focused solutions for blackouts, home security, and personal safety.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

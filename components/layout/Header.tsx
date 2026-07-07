@@ -42,7 +42,7 @@ export function Header() {
             </div>
             <div className="leading-tight">
               <div className="font-sora font-bold text-ink text-[15px]">RafaTools</div>
-              <div className="text-bodyGray text-[11px] leading-none">Power &amp; Security Tools</div>
+              <div className="text-bodyGray text-[11px] leading-none">Power &amp; Safety Tools</div>
             </div>
           </Link>
 
