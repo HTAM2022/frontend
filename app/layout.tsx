@@ -11,23 +11,23 @@ const sora = Sora({ subsets: ["latin"], variable: "--font-sora" })
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
+  title: "RafaTools – Ampoules de Secours, Éclairage Solaire & Alarmes Personnelles | Maroc",
   description:
-    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes, shops, and families. Order online, confirm by phone, pay on delivery.",
+    "Ampoules LED rechargeables, projecteurs solaires 1500LM et alarmes personnelles 130dB pour les foyers, boutiques et familles au Maroc. Commande en ligne, confirmation par téléphone, paiement à la livraison.",
   openGraph: {
-    title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
+    title: "RafaTools – Ampoules de Secours, Éclairage Solaire & Alarmes Personnelles | Maroc",
     description:
-      "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes and families.",
+      "Ampoules LED rechargeables, projecteurs solaires 1500LM et alarmes personnelles 130dB pour les foyers marocains.",
     url: "https://rafatools.online",
     siteName: "RafaTools",
-    locale: "en_KE",
+    locale: "fr_MA",
     type: "website",
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${sora.variable} ${inter.variable}`}>
       <body className="font-inter bg-white text-ink antialiased">
         <PixelProvider />
         <Header />

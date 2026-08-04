@@ -1,14 +1,28 @@
 "use client"
 
 import Script from "next/script"
+import { useEffect } from "react"
+import { usePathname } from "next/navigation"
+import { trackPageView } from "@/lib/tracking"
 
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
 const TIKTOK_PIXEL_ID = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID
 const SNAP_PIXEL_ID = process.env.NEXT_PUBLIC_SNAP_PIXEL_ID
 
+function SitePageTracker() {
+  const pathname = usePathname()
+
+  useEffect(() => {
+    trackPageView()
+  }, [pathname])
+
+  return null
+}
+
 export function PixelProvider() {
   return (
     <>
+      <SitePageTracker />
       {/* Meta (Facebook) Pixel */}
       {META_PIXEL_ID && (
         <Script

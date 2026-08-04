@@ -3,23 +3,23 @@ import { Banknote, PhoneCall, MapPin, PackageCheck } from "lucide-react"
 const TRUST_ITEMS = [
   {
     Icon: Banknote,
-    title: "Pay On Delivery",
-    desc: "No upfront payment. Pay only when the order arrives at your door.",
+    title: "Paiement à la livraison",
+    desc: "Aucun paiement à l'avance. Payez uniquement quand la commande arrive.",
   },
   {
     Icon: PhoneCall,
-    title: "Phone Confirmation",
-    desc: "Our team calls to verify your order before dispatch. No surprises.",
+    title: "Confirmation par téléphone",
+    desc: "Notre équipe appelle pour vérifier votre commande avant l'envoi. Aucune surprise.",
   },
   {
     Icon: MapPin,
-    title: "Kenya-Wide Dispatch",
-    desc: "We deliver across Kenya. Coverage confirmed during your confirmation call.",
+    title: "Livraison partout au Maroc",
+    desc: "Nous livrons dans tout le Maroc. Couverture confirmée lors de l'appel.",
   },
   {
     Icon: PackageCheck,
-    title: "Bundle Value",
-    desc: "Order 2 or 3 pieces and save more per unit. Better value for family or shop setups.",
+    title: "Packs avantageux",
+    desc: "Commandez 2 ou 3 pièces et économisez par unité. Idéal pour toute la famille.",
   },
 ]
 

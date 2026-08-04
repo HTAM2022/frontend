@@ -1,3 +1,5 @@
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000"
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void
@@ -10,8 +12,46 @@ declare global {
   }
 }
 
+type SiteEventPayload = {
+  event_name: string
+  event_id?: string
+  path?: string
+  url?: string
+  referrer?: string
+  product_id?: string
+  product_slug?: string
+  value_kes?: number
+  metadata?: Record<string, unknown>
+}
+
+export function recordSiteEvent(payload: SiteEventPayload) {
+  if (typeof window === "undefined") return
+  if (window.location.pathname.startsWith("/admin")) return
+
+  const body = JSON.stringify({
+    path: window.location.pathname,
+    url: window.location.href,
+    referrer: document.referrer || undefined,
+    ...payload,
+  })
+
+  if (navigator.sendBeacon) {
+    const blob = new Blob([body], { type: "application/json" })
+    navigator.sendBeacon(`${API_BASE}/api/v1/track`, blob)
+    return
+  }
+
+  fetch(`${API_BASE}/api/v1/track`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+    keepalive: true,
+  }).catch(() => undefined)
+}
+
 export function trackPageView() {
   if (typeof window === "undefined") return
+  recordSiteEvent({ event_name: "PageView" })
   window.fbq?.("track", "PageView")
   window.ttq?.track("PageView", {})
   window.snaptr?.("track", "PAGE_VIEW")
@@ -24,6 +64,14 @@ export function trackViewContent(
   eventId: string,
 ) {
   if (typeof window === "undefined") return
+  recordSiteEvent({
+    event_name: "ViewContent",
+    event_id: eventId,
+    product_id: productId,
+    product_slug: productId,
+    value_kes: price,
+    metadata: { product_name: productName },
+  })
   window.fbq?.(
     "track",
     "ViewContent",
@@ -32,7 +80,7 @@ export function trackViewContent(
       content_name: productName,
       content_type: "product",
       value: price,
-      currency: "KES",
+      currency: "MAD",
     },
     { eventID: eventId },
   )
@@ -42,7 +90,7 @@ export function trackViewContent(
       content_type: "product",
       contents: [{ content_id: productId, content_name: productName }],
       value: price,
-      currency: "KES",
+      currency: "MAD",
     },
     { event_id: eventId },
   )
@@ -56,6 +104,14 @@ export function trackAddToCart(
   eventId: string,
 ) {
   if (typeof window === "undefined") return
+  recordSiteEvent({
+    event_name: "AddToCart",
+    event_id: eventId,
+    product_id: productId,
+    product_slug: productId,
+    value_kes: price,
+    metadata: { product_name: productName },
+  })
   window.fbq?.(
     "track",
     "AddToCart",
@@ -64,7 +120,7 @@ export function trackAddToCart(
       content_name: productName,
       content_type: "product",
       value: price,
-      currency: "KES",
+      currency: "MAD",
     },
     { eventID: eventId },
   )
@@ -74,7 +130,7 @@ export function trackAddToCart(
       content_type: "product",
       contents: [{ content_id: productId, content_name: productName }],
       value: price,
-      currency: "KES",
+      currency: "MAD",
     },
     { event_id: eventId },
   )
@@ -83,16 +139,17 @@ export function trackAddToCart(
 
 export function trackInitiateCheckout(totalKes: number, eventId: string) {
   if (typeof window === "undefined") return
+  recordSiteEvent({ event_name: "InitiateCheckout", event_id: eventId, value_kes: totalKes })
   window.fbq?.(
     "track",
     "InitiateCheckout",
-    { value: totalKes, currency: "KES", num_items: 1 },
+    { value: totalKes, currency: "MAD", num_items: 1 },
     { eventID: eventId },
   )
-  window.ttq?.track("InitiateCheckout", { value: totalKes, currency: "KES" }, { event_id: eventId })
+  window.ttq?.track("InitiateCheckout", { value: totalKes, currency: "MAD" }, { event_id: eventId })
   window.snaptr?.("track", "START_CHECKOUT", {
     price: totalKes,
-    currency: "KES",
+    currency: "MAD",
     client_dedup_id: eventId,
   })
 }
@@ -105,12 +162,18 @@ export function trackPurchase(
   publicOrderId: string,
 ) {
   if (typeof window === "undefined") return
+  recordSiteEvent({
+    event_name: "Purchase",
+    event_id: eventId,
+    value_kes: totalKes,
+    metadata: { product_ids: productIds, num_items: numItems, public_order_id: publicOrderId },
+  })
   window.fbq?.(
     "track",
     "Purchase",
     {
       value: totalKes,
-      currency: "KES",
+      currency: "MAD",
       content_ids: productIds,
       content_type: "product",
       num_items: numItems,
@@ -125,13 +188,13 @@ export function trackPurchase(
       content_type: "product",
       contents: productIds.map((id) => ({ content_id: id, quantity: 1 })),
       value: totalKes,
-      currency: "KES",
+      currency: "MAD",
     },
     { event_id: eventId },
   )
   window.snaptr?.("track", "PURCHASE", {
     price: totalKes,
-    currency: "KES",
+    currency: "MAD",
     item_ids: productIds,
     transaction_id: publicOrderId,
     client_dedup_id: eventId,

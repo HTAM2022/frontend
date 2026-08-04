@@ -128,13 +128,13 @@ export function UpsellModal() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2 bg-[#D99A29]/10 text-[#D99A29] px-3 py-1.5 rounded-full">
                 <Zap className="w-3.5 h-3.5" />
-                <span className="text-sm font-bold">{secondsLeft}s remaining</span>
+                <span className="text-sm font-bold">{secondsLeft}s restantes</span>
               </div>
               <button
                 onClick={() => void handleSkip()}
                 disabled={isProcessing}
                 className="p-1.5 text-[#4B5563] hover:text-[#111827] transition-colors rounded-lg"
-                aria-label="Skip upsell"
+                aria-label="Passer cette offre"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -145,25 +145,25 @@ export function UpsellModal() {
               <div className="text-center">
                 <Zap className="w-10 h-10 text-[#0F5C4A] opacity-30 mx-auto mb-1" />
                 <span className="text-xs text-[#4B5563] opacity-70">
-                  {upsellProduct?.name ?? "Add-on item"}
+                  {upsellProduct?.name ?? "Article complémentaire"}
                 </span>
               </div>
             </div>
 
             <Dialog.Title className="font-bold text-xl text-[#111827] mb-2 leading-tight">
-              Add one more protection item before we confirm your delivery
+              Ajoutez un article de protection en plus avant de confirmer la livraison
             </Dialog.Title>
 
             <Dialog.Description className="text-sm text-[#4B5563] mb-4 leading-relaxed">
-              Since your order is COD, you can add this to the same delivery now. No extra form.
-              Our team will confirm everything by phone.
+              Comme votre commande est en paiement à la livraison, vous pouvez l'ajouter à la même
+              livraison maintenant. Aucun formulaire supplémentaire. Notre équipe confirmera tout par téléphone.
             </Dialog.Description>
 
             {upsellProduct && (
               <div className="bg-[#E8F4EF] rounded-xl p-3 mb-4">
                 <p className="font-semibold text-[#111827] text-sm">{upsellProduct.name}</p>
                 <p className="text-[#0F5C4A] font-bold mt-1">
-                  {formatKes(upsellProduct.priceKes)} — one-time add-on price
+                  {formatKes(upsellProduct.priceKes)} — prix d'ajout unique
                 </p>
               </div>
             )}
@@ -177,7 +177,7 @@ export function UpsellModal() {
                 {isProcessing ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
                 ) : (
-                  `Yes, Add It For ${upsellProduct ? formatKes(upsellProduct.priceKes) : "KES 6,836"}`
+                  `Oui, ajouter pour ${upsellProduct ? formatKes(upsellProduct.priceKes) : "299 DH"}`
                 )}
               </button>
 
@@ -186,7 +186,7 @@ export function UpsellModal() {
                 disabled={isProcessing}
                 className="w-full py-2.5 text-sm text-[#4B5563] hover:text-[#111827] transition-colors"
               >
-                No thanks, continue to confirmation
+                Non merci, continuer vers la confirmation
               </button>
             </div>
           </div>

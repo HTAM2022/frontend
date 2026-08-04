@@ -1,15 +1,17 @@
+// Morocco DTC pricing in MAD. Field name `priceKes` kept for backwards compatibility
+// across the codebase — it now represents Moroccan Dirham.
 export const OFFERS = [
-  { quantity: 1 as const, priceKes: 6836, badge: "Starter", label: "1 Piece", savingsKes: 0 },
-  { quantity: 2 as const, priceKes: 9584, badge: "Most Practical", label: "2 Pieces", savingsKes: 4088 },
-  { quantity: 3 as const, priceKes: 11989, badge: "Best Value", label: "3 Pieces", savingsKes: 8519 },
+  { quantity: 1 as const, priceKes: 299, badge: "Découverte", label: "1 Pièce", savingsKes: 0 },
+  { quantity: 2 as const, priceKes: 499, badge: "Le Plus Pratique", label: "2 Pièces", savingsKes: 99 },
+  { quantity: 3 as const, priceKes: 699, badge: "Meilleure Offre", label: "3 Pièces", savingsKes: 198 },
 ] as const
 
 export type Offer = (typeof OFFERS)[number]
 
 export const OFFER_SAVINGS = {
   1: 0,
-  2: 4088,
-  3: 8519,
+  2: 99,
+  3: 198,
 } as const
 
 export function getOffersForProduct(_basePriceKes?: number) {
@@ -28,5 +30,5 @@ export function getPerPiecePrice(quantity: 1 | 2 | 3, total: number): number {
 }
 
 export function formatKes(amount: number): string {
-  return `KES ${amount.toLocaleString("en-KE")}`
+  return `${amount.toLocaleString("fr-MA")} DH`
 }

@@ -7,9 +7,9 @@ import { useCartStore } from "@/store/cart-store"
 import { MobileMenu } from "./MobileMenu"
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/collections", label: "Shop" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Accueil" },
+  { href: "/collections", label: "Boutique" },
+  { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -42,7 +42,7 @@ export function Header() {
             </div>
             <div className="leading-tight">
               <div className="font-sora font-bold text-ink text-[15px]">RafaTools</div>
-              <div className="text-bodyGray text-[11px] leading-none">Power &amp; Safety Tools</div>
+              <div className="text-bodyGray text-[11px] leading-none">Éclairage &amp; Sécurité</div>
             </div>
           </Link>
 
@@ -64,7 +64,7 @@ export function Header() {
             <button
               onClick={openDrawer}
               className="relative p-2.5 rounded-lg hover:bg-softMint transition-colors"
-              aria-label={`Open cart, ${itemCount} items`}
+              aria-label={`Ouvrir le panier, ${itemCount} articles`}
             >
               <ShoppingCart size={22} className="text-ink" />
               {itemCount > 0 && (
@@ -76,7 +76,7 @@ export function Header() {
             <button
               onClick={() => setMobileOpen(true)}
               className="md:hidden p-2.5 rounded-lg hover:bg-softMint transition-colors"
-              aria-label="Open menu"
+              aria-label="Ouvrir le menu"
             >
               <Menu size={22} className="text-ink" />
             </button>

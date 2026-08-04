@@ -42,7 +42,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
 
   return (
     <div className="min-w-0 space-y-5 text-left">
-      <p className="text-sm font-semibold text-charcoal">Choose your bundle:</p>
+      <p className="text-sm font-semibold text-charcoal">Choisissez votre pack :</p>
 
       {/* Offer cards */}
       <div className="space-y-3">
@@ -85,11 +85,11 @@ export function OfferSelector({ product }: OfferSelectorProps) {
                       </span>
                     </div>
                     <p className="text-xs text-bodyGray font-medium">
-                      {formatKes(offer.perPieceKes)} per piece
+                      {formatKes(offer.perPieceKes)} par pièce
                     </p>
                     {offer.savingsKes > 0 && (
                       <p className="text-xs font-bold text-emerald mt-1 bg-emerald/10 inline-block px-2 py-0.5 rounded-md">
-                        Save {formatKes(offer.savingsKes)}
+                        Économisez {formatKes(offer.savingsKes)}
                       </p>
                     )}
                   </div>
@@ -102,9 +102,9 @@ export function OfferSelector({ product }: OfferSelectorProps) {
                   <span
                     className={cn(
                       "text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider",
-                      offer.badge === "Best Value"
+                      offer.badge === "Meilleure Offre"
                         ? "bg-emerald text-white"
-                        : offer.badge === "Most Practical"
+                        : offer.badge === "Le Plus Pratique"
                           ? "bg-warmGold text-white"
                           : "bg-border text-bodyGray",
                     )}
@@ -118,9 +118,18 @@ export function OfferSelector({ product }: OfferSelectorProps) {
         })}
       </div>
 
+      {/* Free-gift teaser */}
+      <div className="rounded-xl border border-warmGold/40 bg-cream/60 px-3 py-2 flex items-center gap-2">
+        <span className="text-lg leading-none">🎁</span>
+        <p className="text-xs text-ink">
+          <span className="font-bold text-warmGold">Achetez 4 pièces ou plus</span> et recevez une{" "}
+          <span className="font-semibold">Lampe Camping Solaire + Ventilateur GRATUITE</span> (valeur 199 DH)
+        </p>
+      </div>
+
       {/* COD trust note */}
       <p className="text-xs text-bodyGray text-center">
-        Pay ONLY when your order arrives. We confirm by phone before dispatch.
+        Payez UNIQUEMENT à la livraison. Nous confirmons par téléphone avant l'envoi.
       </p>
 
       {/* CTA */}
@@ -129,7 +138,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
           onClick={handleAddToCart}
           className="w-full bg-emerald text-white py-4 px-4 rounded-xl font-bold text-lg hover:bg-deepEmerald transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
-          Add Selected Offer — Pay On Delivery
+          Ajouter au panier — Paiement à la livraison
         </button>
       </div>
     </div>

@@ -8,6 +8,7 @@ import { getCrossSells, PRODUCTS } from "@/data/products"
 import { CartItemRow } from "./CartItem"
 import { CartTotals } from "./CartTotals"
 import { CrossSellCard } from "./CrossSellCard"
+import { CartGiftBanner } from "./CartGiftBanner"
 import { CheckoutModal } from "@/components/checkout/CheckoutModal"
 import { UpsellModal } from "@/components/checkout/UpsellModal"
 import { initiateCheckoutId } from "@/lib/event-id"
@@ -81,7 +82,7 @@ export function CartDrawer() {
         <div className="flex items-center justify-between px-5 py-4 border-b border-border shrink-0">
           <div className="flex items-center gap-2">
             <ShoppingCart size={18} className="text-emerald" />
-            <h2 className="font-sora font-bold text-ink text-base">Your Preparedness Cart</h2>
+            <h2 className="font-sora font-bold text-ink text-base">Votre Panier</h2>
           </div>
           <button
             onClick={closeDrawer}
@@ -99,13 +100,16 @@ export function CartDrawer() {
               <div className="w-16 h-16 rounded-full bg-softMint flex items-center justify-center mb-4">
                 <ShoppingCart size={28} className="text-emerald" />
               </div>
-              <p className="font-sora font-semibold text-ink text-base mb-2">Your cart is empty</p>
+              <p className="font-sora font-semibold text-ink text-base mb-2">Votre panier est vide</p>
               <p className="text-sm text-bodyGray max-w-[240px]">
-                Choose a backup or security product to get started.
+                Choisissez un produit de sécurité ou d'éclairage pour commencer.
               </p>
             </div>
           ) : (
             <>
+              {/* Free-gift unlock banner */}
+              <CartGiftBanner items={items} />
+
               {/* Cart items */}
               <div className="divide-y divide-border">
                 {items.map((item) => {
@@ -130,7 +134,7 @@ export function CartDrawer() {
               {crossSells.length > 0 && (
                 <div className="mt-4">
                   <p className="text-xs font-semibold text-bodyGray uppercase tracking-wider mb-1">
-                    Complete your setup
+                    Complétez votre commande
                   </p>
                   <div>
                     {crossSells.map((p) => (
@@ -161,22 +165,22 @@ export function CartDrawer() {
               onClick={handleCheckout}
               className="w-full bg-emerald text-white font-sora font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors active:scale-[0.98]"
             >
-              Continue To COD Checkout
+              Commander — Paiement à la livraison
             </button>
 
             {/* Trust badges */}
             <div className="flex items-center justify-between mt-4 gap-2">
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <ShieldCheck size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">COD</span>
+                <span className="text-xs">Paiement livraison</span>
               </div>
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <Phone size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">Phone Confirm</span>
+                <span className="text-xs">Appel confirmation</span>
               </div>
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <Package size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">Bundle Value</span>
+                <span className="text-xs">Packs avantageux</span>
               </div>
             </div>
           </div>

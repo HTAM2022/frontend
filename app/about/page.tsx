@@ -3,16 +3,16 @@ import { CheckCircle2, Shield, Banknote, Phone } from "lucide-react"
 import { SITE } from "@/data/site"
 
 export const metadata: Metadata = {
-  title: "About RafaTools – Power & Safety for Kenya",
+  title: "À propos de RafaTools – Éclairage & Sécurité au Maroc",
   description:
-    "RafaTools sells practical backup power and outdoor security lighting for Kenyan homes and businesses. Cash on Delivery only.",
+    "RafaTools vend des produits pratiques d'éclairage de secours, sécurité solaire et alarmes personnelles pour les foyers marocains. Paiement à la livraison uniquement.",
 }
 
 const QUALITY_POINTS = [
-  "Products chosen for real Kenyan conditions – frequent outages and outdoor security needs",
-  "Supplier verification required before publishing specs",
-  "Safety certifications will be displayed once confirmed",
-  "No fake reviews or misleading claims – only honest product information",
+  "Produits choisis pour les vraies conditions marocaines — coupures fréquentes et besoins de sécurité extérieure",
+  "Vérification des fournisseurs avant publication des fiches produits",
+  "Certifications de sécurité (CE / RoHS) affichées quand confirmées",
+  "Aucun faux avis ni promesse trompeuse — uniquement des informations honnêtes",
 ]
 
 export default function AboutPage() {
@@ -21,10 +21,11 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-cream to-white py-16 border-b border-border">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h1 className="font-sora font-bold text-ink text-4xl mb-4">About RafaTools</h1>
+          <h1 className="font-sora font-bold text-ink text-4xl mb-4">À propos de RafaTools</h1>
           <p className="text-bodyGray text-lg leading-relaxed">
-            {SITE.promise} We exist to help Kenyan homes, businesses, and families stay ready for
-            blackouts, night-time security gaps, and personal safety risks.
+            {SITE.promise} Nous existons pour aider les foyers, boutiques et familles marocaines à
+            rester prêts face aux coupures de courant, aux failles de sécurité nocturne et aux
+            risques de sécurité personnelle.
           </p>
         </div>
       </section>
@@ -32,22 +33,22 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="py-14">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-sora font-bold text-ink text-2xl mb-4">Our Mission</h2>
+          <h2 className="font-sora font-bold text-ink text-2xl mb-4">Notre Mission</h2>
           <p className="text-bodyGray leading-relaxed mb-4">
-            Power cuts happen without warning in Kenya. Dark compounds and gates create security
-            gaps at night. And women walking home after work should never have to feel unprotected.
-            Most families do not have a backup plan because they assume it is expensive or
-            complicated to order.
+            Les coupures de courant arrivent sans prévenir au Maroc. Les cours sombres et les portails
+            non éclairés créent des failles de sécurité la nuit. Et les femmes qui rentrent du travail
+            ne devraient jamais se sentir vulnérables. La plupart des familles n'ont pas de plan de
+            secours parce qu'elles pensent que c'est cher ou compliqué à commander.
           </p>
           <p className="text-bodyGray leading-relaxed mb-4">
-            RafaTools makes it easy and safe to order practical emergency lighting, solar security,
-            and personal safety products – with no upfront payment required. We use Cash on
-            Delivery because we believe customers should be able to see and receive their order
-            before paying.
+            RafaTools rend simple et sûr le fait de commander de l'éclairage de secours, de la sécurité
+            solaire et des produits de sécurité personnelle — sans aucun paiement à l'avance. Nous
+            utilisons le paiement à la livraison parce que nous pensons que les clients doivent voir et
+            recevoir leur commande avant de payer.
           </p>
           <p className="text-bodyGray leading-relaxed">
-            Every order is confirmed by phone before dispatch. We call you to verify your name, phone
-            number, and order details. No surprises.
+            Chaque commande est confirmée par téléphone avant l'expédition. Nous vous appelons pour
+            vérifier votre nom, votre numéro et les détails de votre commande. Aucune surprise.
           </p>
         </div>
       </section>
@@ -55,23 +56,23 @@ export default function AboutPage() {
       {/* COD Explanation */}
       <section className="bg-softMint py-14">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-sora font-bold text-ink text-2xl mb-6">How Our COD System Works</h2>
+          <h2 className="font-sora font-bold text-ink text-2xl mb-6">Comment fonctionne le paiement à la livraison</h2>
           <div className="grid sm:grid-cols-3 gap-5">
             {[
               {
                 Icon: Banknote,
-                title: "No Upfront Payment",
-                desc: "You pay only when the order arrives at your door. No online payment, no bank transfer.",
+                title: "Aucun paiement à l'avance",
+                desc: "Vous payez uniquement quand la commande arrive à votre porte. Aucun paiement en ligne, aucun virement.",
               },
               {
                 Icon: Phone,
-                title: "Phone Verification",
-                desc: "Our team calls every customer before dispatch. This confirms your order and prevents wrong deliveries.",
+                title: "Vérification par téléphone",
+                desc: "Notre équipe appelle chaque client avant l'expédition. Cela confirme votre commande et évite les mauvaises livraisons.",
               },
               {
                 Icon: Shield,
-                title: "Safe to Try",
-                desc: "Since you pay on delivery, ordering is risk-free. If something is wrong, you can refuse at the door.",
+                title: "Sans risque",
+                desc: "Comme vous payez à la livraison, commander est sans risque. Si quelque chose ne va pas, vous pouvez refuser à la porte.",
               },
             ].map(({ Icon, title, desc }) => (
               <div key={title} className="bg-white rounded-xl border border-border p-5">
@@ -89,7 +90,7 @@ export default function AboutPage() {
       {/* Quality standards */}
       <section className="py-14">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="font-sora font-bold text-ink text-2xl mb-6">Our Quality Standards</h2>
+          <h2 className="font-sora font-bold text-ink text-2xl mb-6">Nos Standards de Qualité</h2>
           <ul className="space-y-3">
             {QUALITY_POINTS.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -104,13 +105,13 @@ export default function AboutPage() {
       {/* Contact prompt */}
       <section className="bg-charcoal text-white py-12">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="font-sora font-bold text-2xl mb-3">Have Questions?</h2>
+          <h2 className="font-sora font-bold text-2xl mb-3">Des questions ?</h2>
           <p className="text-white/70 mb-5">
-            Reach us at{" "}
+            Contactez-nous à{" "}
             <a href={`mailto:${SITE.supportEmail}`} className="text-warmGold underline">
               {SITE.supportEmail}
             </a>
-            . Our team is available to help before and after your order.
+            . Notre équipe est disponible avant et après votre commande.
           </p>
         </div>
       </section>

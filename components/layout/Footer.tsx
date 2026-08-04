@@ -14,7 +14,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-sora font-bold text-white text-[15px]">RafaTools</div>
-                <div className="text-white/60 text-[11px]">Power &amp; Safety Tools</div>
+                <div className="text-white/60 text-[11px]">Éclairage &amp; Sécurité</div>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">{SITE.promise}</p>
@@ -22,30 +22,30 @@ export function Footer() {
 
           {/* Shop */}
           <div>
-            <h4 className="font-sora font-semibold text-white text-sm mb-4">Shop</h4>
+            <h4 className="font-sora font-semibold text-white text-sm mb-4">Boutique</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link
-                  href="/products/rechargeable-emergency-led-bulb"
+                  href="/products/ampoule-led-urgence-rechargeable"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Emergency LED Bulb
+                  Ampoule LED d'Urgence
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/solar-motion-security-light-1500lm"
+                  href="/products/projecteur-solaire-securite-1500lm"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Solar Security Light
+                  Projecteur Solaire de Sécurité
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/personal-safety-alarm-keychain"
+                  href="/products/alarme-personnelle-porte-cles"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Personal Safety Alarm
+                  Alarme Personnelle
                 </Link>
               </li>
               <li>
@@ -53,7 +53,7 @@ export function Footer() {
                   href="/collections"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  All Products
+                  Tous les produits
                 </Link>
               </li>
             </ul>
@@ -61,16 +61,16 @@ export function Footer() {
 
           {/* Help */}
           <div>
-            <h4 className="font-sora font-semibold text-white text-sm mb-4">Help</h4>
+            <h4 className="font-sora font-semibold text-white text-sm mb-4">Aide</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link href="/about" className="text-white/70 text-sm hover:text-white transition-colors">
-                  About RafaTools
+                  À propos de RafaTools
                 </Link>
               </li>
               <li>
                 <Link href="/shipping" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Shipping &amp; Delivery
+                  Livraison
                 </Link>
               </li>
               <li>
@@ -78,7 +78,7 @@ export function Footer() {
                   href="/contact"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Contact Us
+                  Nous contacter
                 </Link>
               </li>
               <li>
@@ -119,7 +119,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/70 text-sm hover:text-white transition-colors"
                   >
-                    WhatsApp Support
+                    Support WhatsApp
                   </a>
                 </li>
               )}
@@ -130,13 +130,13 @@ export function Footer() {
         {/* COD Trust Message */}
         <div className="border-t border-white/10 pt-6 mb-4">
           <p className="text-center text-white/60 text-sm">
-            <span className="text-warmGold font-semibold">100% Cash on Delivery</span> – You pay only
-            when the order arrives at your door. No upfront payment required.
+            <span className="text-warmGold font-semibold">100% Paiement à la livraison</span> — Vous payez
+            uniquement quand la commande arrive à votre porte. Aucun paiement à l'avance.
           </p>
         </div>
 
         <div className="text-center text-white/40 text-xs">
-          &copy; {new Date().getFullYear()} RafaTools. All rights reserved. Nairobi, Kenya.
+          &copy; {new Date().getFullYear()} RafaTools. Tous droits réservés. Casablanca, Maroc.
         </div>
       </div>
     </footer>

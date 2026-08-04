@@ -17,9 +17,9 @@ export default function ContactPage() {
     <div className="bg-white min-h-[60vh]">
       <section className="bg-gradient-to-b from-cream to-white py-14 border-b border-border">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h1 className="font-sora font-bold text-ink text-4xl mb-3">Contact Us</h1>
+          <h1 className="font-sora font-bold text-ink text-4xl mb-3">Contact</h1>
           <p className="text-bodyGray text-base">
-            Have a question about an order or product? We are happy to help.
+            Une question sur une commande ou un produit ? Nous sommes là pour vous aider.
           </p>
         </div>
       </section>
@@ -29,34 +29,34 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-10">
             {/* Form */}
             <div>
-              <h2 className="font-sora font-semibold text-ink text-xl mb-5">Send a Message</h2>
+              <h2 className="font-sora font-semibold text-ink text-xl mb-5">Envoyer un message</h2>
 
               {submitted ? (
                 <div className="bg-softMint border border-emerald/30 rounded-xl p-6 flex flex-col items-center text-center gap-3">
                   <CheckCircle2 size={40} className="text-emerald" />
-                  <p className="font-sora font-bold text-ink text-lg">Message Received</p>
+                  <p className="font-sora font-bold text-ink text-lg">Message reçu</p>
                   <p className="text-bodyGray text-sm">
-                    Thank you for reaching out. Our team will get back to you at{" "}
+                    Merci de nous avoir contactés. Notre équipe vous répondra depuis{" "}
                     <span className="font-semibold">{SITE.supportEmail}</span>.
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", message: "" }) }}
                     className="text-emerald text-sm font-semibold hover:underline"
                   >
-                    Send another message
+                    Envoyer un autre message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-1">
                     <label htmlFor="contact-name" className="block text-sm font-medium text-ink">
-                      Name <span className="text-red-500">*</span>
+                      Nom <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="contact-name"
                       type="text"
                       required
-                      placeholder="Your full name"
+                      placeholder="Votre nom complet"
                       value={form.name}
                       onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50"
@@ -65,12 +65,12 @@ export default function ContactPage() {
 
                   <div className="space-y-1">
                     <label htmlFor="contact-phone" className="block text-sm font-medium text-ink">
-                      Phone Number
+                      Numéro de téléphone
                     </label>
                     <input
                       id="contact-phone"
                       type="tel"
-                      placeholder="07XX XXX XXX"
+                      placeholder="06XX XXX XXX"
                       value={form.phone}
                       onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50"
@@ -85,7 +85,7 @@ export default function ContactPage() {
                       id="contact-message"
                       rows={5}
                       required
-                      placeholder="Tell us what you need help with…"
+                      placeholder="Dites-nous en quoi nous pouvons vous aider…"
                       value={form.message}
                       onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50 resize-none"
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full bg-emerald text-white font-sora font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors"
                   >
-                    Send Message
+                    Envoyer le message
                   </button>
                 </form>
               )}
@@ -104,9 +104,9 @@ export default function ContactPage() {
 
             {/* Contact info */}
             <div className="space-y-6">
-              <h2 className="font-sora font-semibold text-ink text-xl mb-1">Reach Us Directly</h2>
+              <h2 className="font-sora font-semibold text-ink text-xl mb-1">Contactez-nous directement</h2>
               <p className="text-bodyGray text-sm">
-                Our team is available to answer questions about orders, products, and delivery.
+                Notre équipe est disponible pour répondre à vos questions sur les commandes, produits et livraisons.
               </p>
 
               <div className="space-y-4">
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       <Phone size={18} className="text-emerald" />
                     </div>
                     <div>
-                      <p className="text-xs text-bodyGray mb-0.5">Phone</p>
+                      <p className="text-xs text-bodyGray mb-0.5">Téléphone</p>
                       <a
                         href={`tel:${SITE.supportPhone}`}
                         className="text-ink font-medium text-sm hover:text-emerald transition-colors"
@@ -145,9 +145,9 @@ export default function ContactPage() {
 
               <div className="bg-softMint rounded-xl p-4 border border-emerald/20">
                 <p className="text-sm text-bodyGray leading-relaxed">
-                  <span className="font-semibold text-ink">Note:</span> If you have already placed
-                  an order, please keep your phone available. Our team will call to confirm before
-                  dispatch.
+                  <span className="font-semibold text-ink">Note :</span> Si vous avez déjà passé une
+                  commande, gardez votre téléphone disponible. Notre équipe vous appellera pour
+                  confirmer avant l'expédition.
                 </p>
               </div>
             </div>

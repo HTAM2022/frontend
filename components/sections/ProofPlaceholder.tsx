@@ -9,23 +9,23 @@ type Props = {
 
 const DEFAULT_REVIEWS: Review[] = [
   {
-    initials: "JM",
-    location: "Nairobi",
-    text: '"Delivery was fast, they called me before dispatch, and I paid only when the box was in my hands. Very safe process."',
+    initials: "YE",
+    location: "Casablanca",
+    text: '"Livraison rapide, ils m\'ont appelé avant l\'envoi, et j\'ai payé seulement quand le colis était entre mes mains. Très sécurisé."',
   },
   {
-    initials: "AW",
-    location: "Mombasa",
-    text: '"Works exactly as promised. Would order again."',
+    initials: "SM",
+    location: "Rabat",
+    text: '"Fonctionne exactement comme promis. Je recommanderai à d\'autres."',
   },
   {
-    initials: "FK",
-    location: "Kisumu",
-    text: '"I was skeptical about buying online, but pay-on-delivery removed all the risk. Now I recommend RafaTools to everyone."',
+    initials: "AF",
+    location: "Marrakech",
+    text: '"J\'étais sceptique à l\'idée d\'acheter en ligne, mais le paiement à la livraison a levé tous mes doutes. Je recommande RafaTools à tout le monde."',
   },
 ]
 
-export function ProofPlaceholder({ title = "What Customers Are Saying", reviews }: Props) {
+export function ProofPlaceholder({ title = "Ce que disent nos clients", reviews }: Props) {
   const displayReviews = reviews && reviews.length > 0 ? reviews : DEFAULT_REVIEWS
 
   return (
@@ -34,11 +34,11 @@ export function ProofPlaceholder({ title = "What Customers Are Saying", reviews 
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">
             <Clock size={12} />
-            Proof Pending – Expected Reviews
+            Avis à venir – Exemples représentatifs
           </div>
           <h2 className="font-bold text-[#111827] text-3xl mb-3">{title}</h2>
           <p className="text-[#4B5563] text-sm max-w-md mx-auto">
-            (Disclaimer: These are example reviews targeting our exact customer pain points. Real verified reviews will replace these once we launch.)
+            (Note : Ces avis illustrent les problèmes que nos clients cherchent à résoudre. Les vrais avis vérifiés remplaceront ces exemples après le lancement.)
           </p>
         </div>
 
@@ -53,8 +53,8 @@ export function ProofPlaceholder({ title = "What Customers Are Saying", reviews 
                   <span className="text-[#0F5C4A] font-bold text-sm">{r.initials}</span>
                 </div>
                 <div>
-                  <div className="text-[#111827] font-bold text-sm">Customer from {r.location}</div>
-                  <div className="text-[#0F5C4A] text-xs font-semibold">Verified Buyer</div>
+                  <div className="text-[#111827] font-bold text-sm">Client à {r.location}</div>
+                  <div className="text-[#0F5C4A] text-xs font-semibold">Acheteur vérifié</div>
                 </div>
               </div>
               <div className="flex items-start gap-2">

@@ -26,7 +26,7 @@ export function CartItemRow({ cartItemId, name, offerQuantity, totalPriceKes, bu
         <p className="font-medium text-ink text-sm leading-snug truncate">{name}</p>
         {bundleLabel && <p className="text-xs text-bodyGray mt-0.5">{bundleLabel}</p>}
         <p className="text-xs text-bodyGray mt-0.5">
-          {offerQuantity} {offerQuantity === 1 ? "piece" : "pieces"}
+          {offerQuantity} {offerQuantity === 1 ? "pièce" : "pièces"}
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export function CartItemRow({ cartItemId, name, offerQuantity, totalPriceKes, bu
         <button
           onClick={() => removeItem(cartItemId)}
           className="text-bodyGray hover:text-red-500 transition-colors"
-          aria-label="Remove item"
+          aria-label="Retirer l'article"
         >
           <X size={15} />
         </button>

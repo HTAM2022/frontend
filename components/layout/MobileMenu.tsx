@@ -5,9 +5,9 @@ import Link from "next/link"
 import { X } from "lucide-react"
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/collections", label: "Shop" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Accueil" },
+  { href: "/collections", label: "Boutique" },
+  { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -43,7 +43,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
           <button
             onClick={onClose}
             className="p-2 rounded-lg text-bodyGray hover:text-ink hover:bg-softMint transition-colors"
-            aria-label="Close menu"
+            aria-label="Fermer le menu"
           >
             <X size={22} />
           </button>
@@ -62,7 +62,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
         </nav>
         <div className="px-6 py-4 bg-softMint">
           <p className="text-sm text-bodyGray">
-            <span className="font-semibold text-emerald">100% COD</span> – Pay only when it arrives.
+            <span className="font-semibold text-emerald">100% COD</span> – Payez uniquement à la livraison.
           </p>
         </div>
       </div>

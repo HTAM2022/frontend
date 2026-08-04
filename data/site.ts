@@ -1,10 +1,11 @@
 export const SITE = {
   name: "RafaTools",
-  tagline: "Power & Safety Tools",
-  promise: "Emergency lighting, security, and personal safety essentials for Kenyan homes and families.",
-  metaTitle: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
+  tagline: "Éclairage & Sécurité",
+  promise:
+    "Éclairage de secours, sécurité solaire et alarmes personnelles pour les foyers et familles au Maroc.",
+  metaTitle: "RafaTools – Ampoules de Secours, Éclairage Solaire & Alarmes Personnelles | Maroc",
   metaDescription:
-    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes, shops, and families. Order online, confirm by phone, pay on delivery.",
+    "Ampoules LED rechargeables, projecteurs solaires de sécurité 1500LM et alarmes personnelles 130dB pour les foyers, boutiques et familles au Maroc. Commande en ligne, confirmation par téléphone, paiement à la livraison.",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@rafatools.online",
   supportPhone: process.env.NEXT_PUBLIC_SUPPORT_PHONE ?? "",
   supportWhatsapp: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP ?? "",
@@ -14,51 +15,51 @@ export const SITE = {
 
 export const HOME_FAQS = [
   {
-    q: "Do I pay before delivery?",
-    a: "No. RafaTools uses COD (Cash on Delivery). You only pay when the order arrives.",
+    q: "Est-ce que je paie avant la livraison ?",
+    a: "Non. RafaTools fonctionne 100% en paiement à la livraison (COD). Vous payez uniquement quand la commande arrive chez vous.",
   },
   {
-    q: "Where do you deliver?",
-    a: "We deliver across Kenya. Our team confirms coverage when they call to verify your order.",
+    q: "Où livrez-vous ?",
+    a: "Nous livrons partout au Maroc : Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir, Meknès et toutes les autres villes. Notre équipe confirme la couverture lors de l'appel.",
   },
   {
-    q: "Will someone call me first?",
-    a: "Yes. Our team calls every customer to confirm the order before dispatch. Please keep your phone available.",
+    q: "Est-ce que quelqu'un m'appellera avant l'envoi ?",
+    a: "Oui. Notre équipe appelle chaque client pour confirmer la commande avant l'expédition. Merci de garder votre téléphone disponible.",
   },
   {
-    q: "Can I order more than one piece?",
-    a: "Yes. Each product has 1, 2, or 3 piece bundle options. Bundles offer better value per piece.",
+    q: "Puis-je commander plusieurs pièces ?",
+    a: "Oui. Chaque produit propose des packs de 1, 2 ou 3 pièces. Les packs offrent un meilleur prix par pièce.",
   },
   {
-    q: "How do I know which product is right for me?",
-    a: "Browse the product pages for use cases and benefits. Our team can also guide you during the confirmation call.",
+    q: "Comment savoir quel produit me convient ?",
+    a: "Consultez les pages produits pour voir les cas d'usage et les avantages. Notre équipe peut aussi vous conseiller lors de l'appel de confirmation.",
   },
 ]
 
 export const COD_STEPS = [
   {
     step: 1,
-    title: "Choose your offer",
-    desc: "Pick 1, 2, or 3 pieces depending on your home or shop setup.",
+    title: "Choisissez votre pack",
+    desc: "1, 2 ou 3 pièces selon la taille de votre maison ou boutique.",
   },
   {
     step: 2,
-    title: "Enter your name and phone",
-    desc: "No long forms. Just your name and Kenyan mobile number.",
+    title: "Entrez votre nom et téléphone",
+    desc: "Pas de long formulaire. Juste votre nom et numéro mobile marocain.",
   },
   {
     step: 3,
-    title: "We call to confirm",
-    desc: "Our team calls before dispatch to verify your order.",
+    title: "Nous appelons pour confirmer",
+    desc: "Notre équipe vous appelle avant l'expédition pour vérifier votre commande.",
   },
   {
     step: 4,
-    title: "Your order is dispatched",
-    desc: "Once confirmed, we dispatch to your location.",
+    title: "Votre commande est expédiée",
+    desc: "Une fois confirmée, nous expédions à votre adresse.",
   },
   {
     step: 5,
-    title: "You pay when it arrives",
-    desc: "Pay only when you receive the order. No upfront payment.",
+    title: "Vous payez à la livraison",
+    desc: "Payez uniquement à la réception. Aucun paiement à l'avance.",
   },
 ]

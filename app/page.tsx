@@ -10,31 +10,31 @@ import { PRODUCTS } from "@/data/products"
 import { HOME_FAQS } from "@/data/site"
 
 export const metadata: Metadata = {
-  title: "RafaTools – Emergency Lights, Solar Security & Personal Safety | Kenya",
+  title: "RafaTools – Ampoules de Secours, Éclairage Solaire & Alarmes Personnelles | Maroc",
   description:
-    "Rechargeable emergency LED bulbs, 1500LM solar motion security lights, and 130dB personal safety alarms for Kenyan homes and families. COD – pay on delivery.",
+    "Ampoules LED rechargeables, projecteurs solaires 1500LM et alarmes personnelles 130dB pour les foyers marocains. Paiement à la livraison.",
 }
 
 const WHY_REASONS = [
   {
     Icon: Zap,
-    title: "Purpose-built for Kenya",
-    desc: "Products chosen for Kenyan power conditions, night-time security needs, and personal safety realities.",
+    title: "Conçus pour le Maroc",
+    desc: "Produits sélectionnés pour les coupures ONEE, les besoins de sécurité nocturne et les réalités du terrain marocain.",
   },
   {
     Icon: Shield,
-    title: "Safe ordering – no risk",
-    desc: "100% Cash on Delivery. You only pay when the order is in your hands.",
+    title: "Commande sans risque",
+    desc: "100% paiement à la livraison. Vous ne payez que lorsque la commande est entre vos mains.",
   },
   {
     Icon: Clock,
-    title: "Confirmed before dispatch",
-    desc: "Our team calls every customer before sending. No guesswork, no wrong deliveries.",
+    title: "Confirmé avant expédition",
+    desc: "Notre équipe appelle chaque client avant l'envoi. Aucune erreur, aucune fausse livraison.",
   },
   {
     Icon: Building2,
-    title: "Home, business, and family ready",
-    desc: "Solutions that work for bedrooms, shop counters, compounds, salons — and daughters walking home at night.",
+    title: "Maison, boutique et famille",
+    desc: "Solutions pour chambres, comptoirs de boutique, cours, salons — et pour les femmes qui rentrent le soir.",
   },
 ]
 
@@ -48,16 +48,16 @@ export default function HomePage() {
       <section className="bg-charcoal text-white py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-sora font-bold text-2xl md:text-3xl mb-5 leading-snug">
-            Stima cuts without warning. Compounds go dark. And walking home at night is not always safe.
+            Le courant coupe sans prévenir. Les cours restent dans le noir. Et rentrer seul(e) le soir n'est pas toujours sûr.
           </h2>
           <p className="text-white/70 text-base leading-relaxed mb-6">
-            When power cuts happen, you are left in the dark – literally. Children can&apos;t finish
-            homework. Shops lose customers. At night, dark gates invite trouble, and women walking
-            home after work should never feel alone.
+            Quand le courant coupe, vous restez dans le noir – littéralement. Les enfants ne peuvent
+            pas finir leurs devoirs. Les boutiques perdent des clients. La nuit, un portail sombre
+            invite les problèmes, et aucune femme rentrant du travail ne devrait se sentir seule.
           </p>
           <p className="text-white/90 font-semibold text-base">
-            RafaTools solves these three problems with products that are practical, affordable, and
-            available on Cash on Delivery.
+            RafaTools résout ces trois problèmes avec des produits pratiques, abordables et
+            disponibles en paiement à la livraison.
           </p>
         </div>
       </section>
@@ -66,9 +66,9 @@ export default function HomePage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Our Products</h2>
+            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Nos Produits</h2>
             <p className="text-bodyGray text-base max-w-lg mx-auto">
-              Three focused solutions for blackouts, home security, and personal safety.
+              Trois solutions ciblées : coupures de courant, sécurité de la maison et sécurité personnelle.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -83,9 +83,9 @@ export default function HomePage() {
       <section className="bg-softMint py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Why RafaTools</h2>
+            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Pourquoi RafaTools</h2>
             <p className="text-bodyGray text-base">
-              Practical, honest, and built for Kenyan conditions.
+              Pratique, honnête et conçu pour la vie quotidienne au Maroc.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

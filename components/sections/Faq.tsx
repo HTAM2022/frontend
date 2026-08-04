@@ -11,7 +11,7 @@ type Props = {
   title?: string
 }
 
-export function Faq({ faqs, title = "Frequently Asked Questions" }: Props) {
+export function Faq({ faqs, title = "Questions fréquentes" }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   function toggle(i: number) {

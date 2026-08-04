@@ -38,7 +38,7 @@ export type CartItem = {
   offerQuantity: 1 | 2 | 3
   unitBundlePriceKes: number
   totalPriceKes: number
-  source: "product_page" | "cart_cross_sell" | "upsell"
+  source: "product_page" | "cart_cross_sell" | "upsell" | "free_gift"
   addedAt: string
   eventIds: { addToCart: string }
 }

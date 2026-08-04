@@ -58,10 +58,10 @@ export function CrossSellCard({ productId, slug, name, shortHeadline, benefit, p
       <button
         onClick={handleAdd}
         className="shrink-0 flex items-center gap-1 bg-emerald text-white text-xs font-semibold px-3 py-2 rounded-lg hover:bg-deepEmerald transition-colors"
-        aria-label={`Add ${name} to order`}
+        aria-label={`Ajouter ${name} à la commande`}
       >
         <Plus size={13} />
-        Add
+        Ajouter
       </button>
     </div>
   )

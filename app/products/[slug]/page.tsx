@@ -40,11 +40,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const product = PRODUCTS.find((p) => p.slug === slug)
-  if (!product) return { title: "Product Not Found | RafaTools" }
+  if (!product) return { title: "Produit introuvable | RafaTools" }
 
   return {
-    title: `${product.englishName} | RafaTools – Power & Safety Tools`,
-    description: `${product.cardSubheading} Pay on delivery. COD orders confirmed by phone before dispatch.`,
+    title: `${product.englishName} | RafaTools – Éclairage & Sécurité`,
+    description: `${product.cardSubheading} Paiement à la livraison. Commande confirmée par téléphone avant l'expédition.`,
   }
 }
 
@@ -75,7 +75,7 @@ export default async function ProductPage({ params }: PageProps) {
             <div className="min-w-0 space-y-6">
               <div className="min-w-0">
                 <p className="text-xs text-bodyGray font-medium mb-2 break-words">
-                  <Link href="/collections" className="hover:text-emerald transition-colors">Shop</Link>
+                  <Link href="/collections" className="hover:text-emerald transition-colors">Boutique</Link>
                   {" / "}
                   {product.englishName}
                 </p>
@@ -88,11 +88,11 @@ export default async function ProductPage({ params }: PageProps) {
 
               {/* Price from */}
               <div className="flex flex-wrap items-baseline gap-2 bg-softMint/60 p-4 rounded-xl border border-emerald/10">
-                <span className="text-sm text-bodyGray font-medium">from</span>
+                <span className="text-sm text-bodyGray font-medium">à partir de</span>
                 <span className="text-3xl font-sora font-bold text-emerald">
                   {formatKes(baseOffer.priceKes)}
                 </span>
-                <span className="text-sm text-bodyGray font-medium">— paid on delivery</span>
+                <span className="text-sm text-bodyGray font-medium">— payé à la livraison</span>
               </div>
 
               {/* Top benefit bullets */}
@@ -112,15 +112,15 @@ export default async function ProductPage({ params }: PageProps) {
               <div className="flex items-center justify-around pt-4 border-t border-border/70">
                 <div className="flex flex-col items-center gap-1 text-center">
                   <Truck className="w-5 h-5 text-emerald" />
-                  <span className="text-[10px] font-bold text-bodyGray uppercase">COD<br/>Delivery</span>
+                  <span className="text-[10px] font-bold text-bodyGray uppercase">Livraison<br/>COD</span>
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <PhoneCall className="w-5 h-5 text-emerald" />
-                  <span className="text-[10px] font-bold text-bodyGray uppercase">Phone<br/>Confirm</span>
+                  <span className="text-[10px] font-bold text-bodyGray uppercase">Appel<br/>Confirmation</span>
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <ShieldCheck className="w-5 h-5 text-emerald" />
-                  <span className="text-[10px] font-bold text-bodyGray uppercase">Pay<br/>On Arrival</span>
+                  <span className="text-[10px] font-bold text-bodyGray uppercase">Payer à<br/>la livraison</span>
                 </div>
               </div>
             </div>
@@ -136,9 +136,9 @@ export default async function ProductPage({ params }: PageProps) {
         <div className="max-w-4xl mx-auto overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="font-sora font-bold text-3xl text-ink mb-3">
-              What it does for you
+              Ce que ça fait pour vous
             </h2>
-            <p className="text-bodyGray">Real outcomes, not just specs.</p>
+            <p className="text-bodyGray">Des résultats concrets, pas juste des specs.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {product.benefits.map((b) => (
@@ -158,7 +158,7 @@ export default async function ProductPage({ params }: PageProps) {
       <section className="bg-cream py-16 px-4 border-t border-border overflow-x-hidden">
         <div className="max-w-3xl mx-auto overflow-hidden">
           <h2 className="font-sora font-bold text-3xl text-ink mb-8 text-center">
-            Product Specifications
+            Spécifications techniques
           </h2>
           <div className="border border-border rounded-2xl overflow-hidden bg-white shadow-sm">
             {product.specs.map((spec, idx) => (
@@ -176,7 +176,7 @@ export default async function ProductPage({ params }: PageProps) {
             ))}
           </div>
           <p className="text-xs text-bodyGray text-center mt-4">
-            Specifications will be updated from supplier before launch.
+            Spécifications finalisées avec le fournisseur avant le lancement.
           </p>
         </div>
       </section>
@@ -186,10 +186,10 @@ export default async function ProductPage({ params }: PageProps) {
         <div className="max-w-2xl mx-auto overflow-hidden">
           <div className="text-center mb-8">
             <h2 className="font-sora font-bold text-3xl text-ink mb-3">
-              Choose the setup that matches your home or business
+              Choisissez le pack qui vous convient
             </h2>
             <p className="text-bodyGray">
-              Better value when you plan for multiple rooms, spots, or family needs.
+              Meilleur prix quand vous équipez plusieurs pièces, endroits ou membres de la famille.
             </p>
           </div>
           <OfferSelector product={product} />
@@ -200,7 +200,7 @@ export default async function ProductPage({ params }: PageProps) {
       <section className="bg-cream py-16 px-4 border-t border-border overflow-x-hidden">
         <div className="max-w-4xl mx-auto overflow-hidden">
           <h2 className="font-sora font-bold text-3xl text-ink mb-8 text-center">
-            Where it works
+            Où l'utiliser
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {product.useCases.map((uc) => {
@@ -221,10 +221,10 @@ export default async function ProductPage({ params }: PageProps) {
       </section>
 
       {/* 7. Social proof placeholder */}
-      <ProofPlaceholder title="What Customers Are Saying" reviews={product.reviews} />
+      <ProofPlaceholder title="Ce que disent nos clients" reviews={product.reviews} />
 
       {/* 8. FAQ */}
-      <Faq faqs={product.faqs} title="Common Questions" />
+      <Faq faqs={product.faqs} title="Questions fréquentes" />
 
       {/* Trust Strip before Final CTA */}
       <TrustStrip />
@@ -234,15 +234,15 @@ export default async function ProductPage({ params }: PageProps) {
         <div className="max-w-3xl mx-auto text-center overflow-hidden">
           <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wide">
             <ShieldCheck className="w-4 h-4" />
-            30-Day Risk-Free Warranty included
+            Garantie 30 jours satisfait ou remboursé
           </div>
           <h2 className="font-sora font-bold text-4xl mb-4">
-            Be ready before the next blackout or dark night
+            Soyez prêt avant la prochaine coupure ou nuit sombre
           </h2>
           <p className="text-softMint/90 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
-            Order today to secure your stock. Enter your name and phone number below. 
-            Our team will call you to confirm your location before dispatch. 
-            <strong className="text-warmGold block mt-2 text-xl"> You pay ONLY when the order arrives at your door.</strong>
+            Commandez aujourd'hui pour sécuriser votre stock. Entrez votre nom et téléphone ci-dessous.
+            Notre équipe vous appellera pour confirmer votre adresse avant l'expédition.
+            <strong className="text-warmGold block mt-2 text-xl"> Vous payez UNIQUEMENT quand la commande arrive.</strong>
           </p>
           <div className="bg-white/10 rounded-3xl p-6 md:p-8 inline-block w-full max-w-xl backdrop-blur-sm border border-white/20">
             <OfferSelector product={product} />

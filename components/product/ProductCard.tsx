@@ -48,14 +48,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
         )}
         {/* COD badge */}
         <span className="absolute top-4 left-4 bg-[#D99A29] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm z-10">
-          COD Available
+          Paiement à la livraison
         </span>
       </div>
 
       <div className="min-w-0 p-5 sm:p-6 flex flex-col flex-1">
         {/* Social trust — no fake reviews */}
         <p className="text-xs font-semibold text-[#0F5C4A] mb-3 uppercase tracking-wider">
-          Chosen for blackout, security, and personal-safety needs
+          Choisi pour les coupures, la sécurité et la protection personnelle
         </p>
 
         {/* Product headline */}
@@ -84,14 +84,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
         {/* Price + CTA */}
         <div className="flex flex-col gap-3 mt-auto pt-4 border-t border-[#E5E7EB]/70 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col">
-            <span className="text-xs text-[#4B5563] font-medium">from</span>
+            <span className="text-xs text-[#4B5563] font-medium">à partir de</span>
             <span className="text-xl font-bold text-[#0F5C4A]">{formatKes(basePrice)}</span>
           </div>
           <Link
             href={`/products/${product.slug}`}
             className="bg-[#0F5C4A] text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#073B31] transition-colors shadow-md hover:shadow-lg"
           >
-            Choose Offer
+            Voir l'offre
           </Link>
         </div>
       </div>

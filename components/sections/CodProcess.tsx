@@ -5,9 +5,9 @@ export function CodProcess() {
     <section id="cod-process" className="bg-cream py-16">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="font-sora font-bold text-ink text-3xl mb-3">How COD Ordering Works</h2>
+          <h2 className="font-sora font-bold text-ink text-3xl mb-3">Comment commander (COD)</h2>
           <p className="text-bodyGray text-base">
-            Simple, safe, and transparent. No payment until your order is at your door.
+            Simple, sûr et transparent. Aucun paiement tant que votre commande n'est pas à votre porte.
           </p>
         </div>
 

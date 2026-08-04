@@ -7,19 +7,19 @@ interface ProductStoryProps {
 }
 
 const DEFAULT_STORY = {
-  painBadge: "The Kenyan Reality",
-  painTitle: "Built for real problems Kenyan families face every day.",
+  painBadge: "La Réalité Marocaine",
+  painTitle: "Conçu pour les vrais problèmes des familles marocaines.",
   painCopy1:
-    "Whether it's blackouts, dark compounds, or unsafe walks home — some problems have quiet, practical solutions that make life easier.",
-  painCopy2: "This product was chosen because it directly solves that problem, without gimmicks.",
-  painPromise: "Small tools. Real peace of mind.",
-  scienceBadge: "Built To Last",
-  scienceTitle: "Engineered for tough Kenyan conditions.",
+    "Coupures de courant, portails sombres, rentrées à pied non sûres — certains problèmes ont des solutions simples et pratiques qui changent la vie.",
+  painCopy2: "Ce produit a été choisi car il résout directement ce problème, sans gadget inutile.",
+  painPromise: "Des outils simples. Une vraie tranquillité d'esprit.",
+  scienceBadge: "Fait pour durer",
+  scienceTitle: "Conçu pour les conditions marocaines.",
   scienceCopy:
-    "Every product in our range is selected for durability, safety, and real-world use — not for flashy specs.",
+    "Chaque produit de notre gamme est sélectionné pour sa durabilité, sa sécurité et son usage réel — pas pour des specs vides.",
   scienceBullets: [
-    { title: "Quality Components", body: "Upgraded parts chosen to survive daily use." },
-    { title: "Practical Design", body: "Simple to use, easy to maintain, ready when you need it." },
+    { title: "Composants de qualité", body: "Pièces améliorées choisies pour résister à l'usage quotidien." },
+    { title: "Design pratique", body: "Simple à utiliser, facile à entretenir, prêt quand vous en avez besoin." },
   ],
 }
 
@@ -129,21 +129,21 @@ export function ProductStory({ product }: ProductStoryProps) {
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-cream border border-warmGold text-[#92400E] rounded-full text-xs font-bold tracking-wide uppercase">
               <BadgeCheck className="w-4 h-4" />
-              100% Risk-Free
+              100% sans risque
             </div>
             <h2 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight">
-              30-Day Money-Back Warranty.
+              Garantie 30 jours satisfait ou remboursé.
             </h2>
             <p className="text-lg text-bodyGray leading-relaxed">
-              We are so confident in the {product.englishName} that we offer a full 30-day warranty. If it doesn&apos;t work as described, we replace it — no questions asked.
+              Nous sommes tellement sûrs du {product.englishName} que nous offrons une garantie complète de 30 jours. S'il ne fonctionne pas comme décrit, nous le remplaçons — sans aucune question.
             </p>
             <div className="bg-cream p-5 rounded-2xl border border-warmGold/30">
               <h4 className="font-sora font-bold text-ink mb-2 flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-warmGold" />
-                Our Promise to You
+                Notre engagement
               </h4>
               <p className="text-sm text-bodyGray leading-relaxed">
-                RafaTools is a Kenyan-focused brand. Every product ships with a real support line, phone confirmation before dispatch, and pay-on-arrival. Order today, test it yourself, and only pay when it&apos;s in your hands.
+                RafaTools est une marque conçue pour le Maroc. Chaque produit est livré avec un vrai support client, une confirmation par téléphone avant l'expédition, et le paiement à la livraison. Commandez aujourd'hui, testez vous-même, et ne payez qu'à la réception.
               </p>
             </div>
           </div>

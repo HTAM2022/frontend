@@ -19,13 +19,13 @@ import type { OrderResponse } from "@/types/commerce"
 import { cn } from "@/lib/utils"
 
 const schema = z.object({
-  fullName: z.string().min(2, "Enter your full name.").max(100, "Name is too long"),
-  city: z.string().min(2, "Enter your city or town.").max(100, "City name is too long"),
+  fullName: z.string().min(2, "Entrez votre nom complet.").max(100, "Nom trop long"),
+  city: z.string().min(2, "Entrez votre ville.").max(100, "Nom de ville trop long"),
   phone: z
     .string()
-    .min(9, "Enter a valid Kenyan mobile number, e.g. 0712 345 678 or +254 712 345 678.")
+    .min(9, "Entrez un numéro mobile marocain valide, ex. 0612 345 678 ou +212 612 345 678.")
     .refine((v) => isValidKenyanPhone(normalizePhone(v)), {
-      message: "Enter a valid Kenyan mobile number, e.g. 0712 345 678 or +254 712 345 678.",
+      message: "Entrez un numéro mobile marocain valide, ex. 0612 345 678 ou +212 612 345 678.",
     }),
 })
 
@@ -72,6 +72,17 @@ export function CheckoutModal() {
         offer_quantity: item.offerQuantity,
         source: item.source,
       }))
+
+      // Append free-gift line if 4+ pieces total (backend re-validates)
+      const totalPieces = items.reduce((s, i) => s + (i.offerQuantity ?? 1), 0)
+      if (totalPieces >= 4) {
+        orderItems.push({
+          product_id: "gift",
+          product_slug: "solar-camping-lamp-gift",
+          offer_quantity: 1,
+          source: "free_gift",
+        })
+      }
 
       const payload = {
         customer: {
@@ -124,8 +135,8 @@ export function CheckoutModal() {
       openUpsell()
     } catch (err: unknown) {
       const message =
-        err instanceof Error ? err.message : "Something went wrong. Please try again."
-      setSubmitError(message.length > 150 ? "Order submission failed. Please try again." : message)
+        err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer."
+      setSubmitError(message.length > 150 ? "Échec de l'envoi de la commande. Veuillez réessayer." : message)
     } finally {
       setIsSubmitting(false)
     }
@@ -155,10 +166,10 @@ export function CheckoutModal() {
           <div className="flex flex-col items-center justify-center px-5 py-5 border-b border-[#E5E7EB] flex-shrink-0 relative">
             <div className="text-center">
               <Dialog.Title className="font-bold text-xl text-[#111827]">
-                Confirm Your COD Order
+                Confirmer votre commande
               </Dialog.Title>
               <Dialog.Description className="text-sm text-[#4B5563] mt-1">
-                Name and phone only. No upfront payment.
+                Nom et téléphone uniquement. Aucun paiement à l'avance.
               </Dialog.Description>
             </div>
             <Dialog.Close asChild>
@@ -176,7 +187,7 @@ export function CheckoutModal() {
             {items.length > 0 && (
               <div className="bg-[#E8F4EF] rounded-xl p-4 space-y-2">
                 <p className="text-xs font-semibold text-[#0F5C4A] uppercase tracking-wider">
-                  Order Summary
+                  Récapitulatif
                 </p>
                 {items.map((item) => (
                   <div
@@ -192,6 +203,14 @@ export function CheckoutModal() {
                     </span>
                   </div>
                 ))}
+                {items.reduce((s, i) => s + (i.offerQuantity ?? 1), 0) >= 4 && (
+                  <div className="flex items-center justify-between text-sm border-t border-[#0F5C4A]/20 pt-2 mt-2">
+                    <span className="text-[#0F5C4A] font-semibold">
+                      🎁 Lampe Camping Solaire + Ventilateur
+                    </span>
+                    <span className="font-semibold text-[#0F5C4A]">GRATUIT</span>
+                  </div>
+                )}
                 <div className="border-t border-[#0F5C4A]/20 pt-2 flex items-center justify-between font-bold text-[#111827]">
                   <span>Total</span>
                   <span className="text-[#0F5C4A]">{formatKes(cartTotal)}</span>
@@ -203,8 +222,8 @@ export function CheckoutModal() {
             <div className="flex items-center gap-3 text-sm text-[#4B5563] bg-[#FFF8ED] rounded-xl p-4 text-center border border-[#FDE68A]/50">
               <ShieldCheck className="w-6 h-6 text-[#0F5C4A] flex-shrink-0" />
               <span className="leading-snug">
-                Enter your name and Kenyan mobile number. We will call to confirm before dispatch.
-                <strong className="text-[#0F5C4A] block mt-1">You pay ONLY when the order arrives.</strong>
+                Entrez votre nom et numéro de téléphone marocain. Nous vous appellerons pour confirmer avant l'expédition.
+                <strong className="text-[#0F5C4A] block mt-1">Vous payez UNIQUEMENT à la réception.</strong>
               </span>
             </div>
 
@@ -212,12 +231,12 @@ export function CheckoutModal() {
             <form id="checkout-form" onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="space-y-1">
                 <label htmlFor="fullName" className="text-sm font-medium text-[#1F2937] block">
-                  Full Name
+                  Nom complet
                 </label>
                 <input
                   id="fullName"
                   type="text"
-                  placeholder="e.g. Jane Wanjiku"
+                  placeholder="ex. Youssef El Amrani"
                   className={cn(
                     "w-full px-4 py-3 rounded-xl border text-[#111827] placeholder:text-[#4B5563]/50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0F5C4A] transition",
                     errors.fullName
@@ -235,12 +254,12 @@ export function CheckoutModal() {
 
               <div className="space-y-1">
                 <label htmlFor="city" className="text-sm font-medium text-[#1F2937] block">
-                  City / Town
+                  Ville
                 </label>
                 <input
                   id="city"
                   type="text"
-                  placeholder="e.g. Nairobi, Mombasa, Kisumu"
+                  placeholder="ex. Casablanca, Rabat, Marrakech"
                   className={cn(
                     "w-full px-4 py-3 rounded-xl border text-[#111827] placeholder:text-[#4B5563]/50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0F5C4A] transition",
                     errors.city
@@ -276,14 +295,14 @@ export function CheckoutModal() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Submitting order...
+                  Envoi en cours...
                 </>
               ) : (
-                "Submit COD Order"
+                "Valider ma commande (COD)"
               )}
             </button>
             <p className="text-sm text-[#4B5563] text-center mt-3 font-medium">
-              Our team will call you to confirm before dispatch.
+              Notre équipe vous appellera pour confirmer avant l'expédition.
             </p>
           </div>
         </Dialog.Content>
