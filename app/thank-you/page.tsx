@@ -82,7 +82,7 @@ function ThankYouContent() {
           </h1>
           <p className="text-[#4B5563] text-base">
             Merci, <span className="font-semibold text-[#111827]">{order.customer.name}</span>.
-            Notre équipe vous appellera pour confirmer votre commande avant l'expédition.
+            Notre équipe vous appellera pour confirmer votre commande avant l’expédition.
           </p>
           <div className="inline-block mt-4 bg-white border border-[#E5E7EB] rounded-xl px-5 py-2">
             <span className="text-xs text-[#4B5563]">N° de commande : </span>
@@ -168,7 +168,7 @@ function ThankYouContent() {
                 <p className="text-sm font-medium text-[#111827]">Appel de confirmation</p>
                 <p className="text-xs text-[#4B5563] mt-0.5">
                   Notre équipe vous appellera pour confirmer les détails de votre commande avant
-                  l'expédition. Gardez votre téléphone disponible.
+                  l’expédition. Gardez votre téléphone disponible.
                 </p>
               </div>
             </div>

@@ -7,7 +7,7 @@ export function CodProcess() {
         <div className="text-center mb-10">
           <h2 className="font-sora font-bold text-ink text-3xl mb-3">Comment commander (COD)</h2>
           <p className="text-bodyGray text-base">
-            Simple, sûr et transparent. Aucun paiement tant que votre commande n'est pas à votre porte.
+            Simple, sûr et transparent. Aucun paiement tant que votre commande n’est pas à votre porte.
           </p>
         </div>
 

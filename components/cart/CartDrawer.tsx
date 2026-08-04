@@ -102,7 +102,7 @@ export function CartDrawer() {
               </div>
               <p className="font-sora font-semibold text-ink text-base mb-2">Votre panier est vide</p>
               <p className="text-sm text-bodyGray max-w-[240px]">
-                Choisissez un produit de sécurité ou d'éclairage pour commencer.
+                Choisissez un produit de sécurité ou d’éclairage pour commencer.
               </p>
             </div>
           ) : (

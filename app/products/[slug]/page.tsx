@@ -200,7 +200,7 @@ export default async function ProductPage({ params }: PageProps) {
       <section className="bg-cream py-16 px-4 border-t border-border overflow-x-hidden">
         <div className="max-w-4xl mx-auto overflow-hidden">
           <h2 className="font-sora font-bold text-3xl text-ink mb-8 text-center">
-            Où l'utiliser
+            Où l’utiliser
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {product.useCases.map((uc) => {
@@ -240,8 +240,8 @@ export default async function ProductPage({ params }: PageProps) {
             Soyez prêt avant la prochaine coupure ou nuit sombre
           </h2>
           <p className="text-softMint/90 mb-10 text-lg max-w-2xl mx-auto leading-relaxed">
-            Commandez aujourd'hui pour sécuriser votre stock. Entrez votre nom et téléphone ci-dessous.
-            Notre équipe vous appellera pour confirmer votre adresse avant l'expédition.
+            Commandez aujourd’hui pour sécuriser votre stock. Entrez votre nom et téléphone ci-dessous.
+            Notre équipe vous appellera pour confirmer votre adresse avant l’expédition.
             <strong className="text-warmGold block mt-2 text-xl"> Vous payez UNIQUEMENT quand la commande arrive.</strong>
           </p>
           <div className="bg-white/10 rounded-3xl p-6 md:p-8 inline-block w-full max-w-xl backdrop-blur-sm border border-white/20">

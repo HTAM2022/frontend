@@ -32,7 +32,7 @@ export function CartTotals({ total, items }: Props) {
         <span className="font-sora font-bold text-ink text-base">Total</span>
         <span className="font-sora font-bold text-ink text-xl">{formatKes(total)}</span>
       </div>
-      <p className="text-xs text-bodyGray">Paiement à la livraison. Aucun paiement à l'avance.</p>
+      <p className="text-xs text-bodyGray">Paiement à la livraison. Aucun paiement à l’avance.</p>
     </div>
   )
 }

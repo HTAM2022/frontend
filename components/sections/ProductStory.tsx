@@ -135,7 +135,7 @@ export function ProductStory({ product }: ProductStoryProps) {
               Garantie 30 jours satisfait ou remboursé.
             </h2>
             <p className="text-lg text-bodyGray leading-relaxed">
-              Nous sommes tellement sûrs du {product.englishName} que nous offrons une garantie complète de 30 jours. S'il ne fonctionne pas comme décrit, nous le remplaçons — sans aucune question.
+              Nous sommes tellement sûrs du {product.englishName} que nous offrons une garantie complète de 30 jours. S’il ne fonctionne pas comme décrit, nous le remplaçons — sans aucune question.
             </p>
             <div className="bg-cream p-5 rounded-2xl border border-warmGold/30">
               <h4 className="font-sora font-bold text-ink mb-2 flex items-center gap-2">
@@ -143,7 +143,7 @@ export function ProductStory({ product }: ProductStoryProps) {
                 Notre engagement
               </h4>
               <p className="text-sm text-bodyGray leading-relaxed">
-                RafaTools est une marque conçue pour le Maroc. Chaque produit est livré avec un vrai support client, une confirmation par téléphone avant l'expédition, et le paiement à la livraison. Commandez aujourd'hui, testez vous-même, et ne payez qu'à la réception.
+                RafaTools est une marque conçue pour le Maroc. Chaque produit est livré avec un vrai support client, une confirmation par téléphone avant l’expédition, et le paiement à la livraison. Commandez aujourd’hui, testez vous-même, et ne payez qu’à la réception.
               </p>
             </div>
           </div>

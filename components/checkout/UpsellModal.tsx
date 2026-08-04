@@ -155,7 +155,7 @@ export function UpsellModal() {
             </Dialog.Title>
 
             <Dialog.Description className="text-sm text-[#4B5563] mb-4 leading-relaxed">
-              Comme votre commande est en paiement à la livraison, vous pouvez l'ajouter à la même
+              Comme votre commande est en paiement à la livraison, vous pouvez l’ajouter à la même
               livraison maintenant. Aucun formulaire supplémentaire. Notre équipe confirmera tout par téléphone.
             </Dialog.Description>
 
@@ -163,7 +163,7 @@ export function UpsellModal() {
               <div className="bg-[#E8F4EF] rounded-xl p-3 mb-4">
                 <p className="font-semibold text-[#111827] text-sm">{upsellProduct.name}</p>
                 <p className="text-[#0F5C4A] font-bold mt-1">
-                  {formatKes(upsellProduct.priceKes)} — prix d'ajout unique
+                  {formatKes(upsellProduct.priceKes)} — prix d’ajout unique
                 </p>
               </div>
             )}

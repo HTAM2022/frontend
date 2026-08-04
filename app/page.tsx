@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="bg-charcoal text-white py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-sora font-bold text-2xl md:text-3xl mb-5 leading-snug">
-            Le courant coupe sans prévenir. Les cours restent dans le noir. Et rentrer seul(e) le soir n'est pas toujours sûr.
+            Le courant coupe sans prévenir. Les cours restent dans le noir. Et rentrer seul(e) le soir n’est pas toujours sûr.
           </h2>
           <p className="text-white/70 text-base leading-relaxed mb-6">
             Quand le courant coupe, vous restez dans le noir – littéralement. Les enfants ne peuvent

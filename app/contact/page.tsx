@@ -147,7 +147,7 @@ export default function ContactPage() {
                 <p className="text-sm text-bodyGray leading-relaxed">
                   <span className="font-semibold text-ink">Note :</span> Si vous avez déjà passé une
                   commande, gardez votre téléphone disponible. Notre équipe vous appellera pour
-                  confirmer avant l'expédition.
+                  confirmer avant l’expédition.
                 </p>
               </div>
             </div>

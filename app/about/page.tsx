@@ -37,17 +37,17 @@ export default function AboutPage() {
           <p className="text-bodyGray leading-relaxed mb-4">
             Les coupures de courant arrivent sans prévenir au Maroc. Les cours sombres et les portails
             non éclairés créent des failles de sécurité la nuit. Et les femmes qui rentrent du travail
-            ne devraient jamais se sentir vulnérables. La plupart des familles n'ont pas de plan de
-            secours parce qu'elles pensent que c'est cher ou compliqué à commander.
+            ne devraient jamais se sentir vulnérables. La plupart des familles n’ont pas de plan de
+            secours parce qu’elles pensent que c’est cher ou compliqué à commander.
           </p>
           <p className="text-bodyGray leading-relaxed mb-4">
-            RafaTools rend simple et sûr le fait de commander de l'éclairage de secours, de la sécurité
-            solaire et des produits de sécurité personnelle — sans aucun paiement à l'avance. Nous
+            RafaTools rend simple et sûr le fait de commander de l’éclairage de secours, de la sécurité
+            solaire et des produits de sécurité personnelle — sans aucun paiement à l’avance. Nous
             utilisons le paiement à la livraison parce que nous pensons que les clients doivent voir et
             recevoir leur commande avant de payer.
           </p>
           <p className="text-bodyGray leading-relaxed">
-            Chaque commande est confirmée par téléphone avant l'expédition. Nous vous appelons pour
+            Chaque commande est confirmée par téléphone avant l’expédition. Nous vous appelons pour
             vérifier votre nom, votre numéro et les détails de votre commande. Aucune surprise.
           </p>
         </div>

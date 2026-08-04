@@ -169,7 +169,7 @@ export function CheckoutModal() {
                 Confirmer votre commande
               </Dialog.Title>
               <Dialog.Description className="text-sm text-[#4B5563] mt-1">
-                Nom et téléphone uniquement. Aucun paiement à l'avance.
+                Nom et téléphone uniquement. Aucun paiement à l’avance.
               </Dialog.Description>
             </div>
             <Dialog.Close asChild>
@@ -222,7 +222,7 @@ export function CheckoutModal() {
             <div className="flex items-center gap-3 text-sm text-[#4B5563] bg-[#FFF8ED] rounded-xl p-4 text-center border border-[#FDE68A]/50">
               <ShieldCheck className="w-6 h-6 text-[#0F5C4A] flex-shrink-0" />
               <span className="leading-snug">
-                Entrez votre nom et numéro de téléphone marocain. Nous vous appellerons pour confirmer avant l'expédition.
+                Entrez votre nom et numéro de téléphone marocain. Nous vous appellerons pour confirmer avant l’expédition.
                 <strong className="text-[#0F5C4A] block mt-1">Vous payez UNIQUEMENT à la réception.</strong>
               </span>
             </div>
@@ -302,7 +302,7 @@ export function CheckoutModal() {
               )}
             </button>
             <p className="text-sm text-[#4B5563] text-center mt-3 font-medium">
-              Notre équipe vous appellera pour confirmer avant l'expédition.
+              Notre équipe vous appellera pour confirmer avant l’expédition.
             </p>
           </div>
         </Dialog.Content>

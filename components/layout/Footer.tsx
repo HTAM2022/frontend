@@ -29,7 +29,7 @@ export function Footer() {
                   href="/products/ampoule-led-urgence-rechargeable"
                   className="text-white/70 text-sm hover:text-white transition-colors"
                 >
-                  Ampoule LED d'Urgence
+                  Ampoule LED d’Urgence
                 </Link>
               </li>
               <li>
@@ -131,7 +131,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-6 mb-4">
           <p className="text-center text-white/60 text-sm">
             <span className="text-warmGold font-semibold">100% Paiement à la livraison</span> — Vous payez
-            uniquement quand la commande arrive à votre porte. Aucun paiement à l'avance.
+            uniquement quand la commande arrive à votre porte. Aucun paiement à l’avance.
           </p>
         </div>
 

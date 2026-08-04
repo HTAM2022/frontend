@@ -91,7 +91,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
             href={`/products/${product.slug}`}
             className="bg-[#0F5C4A] text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#073B31] transition-colors shadow-md hover:shadow-lg"
           >
-            Voir l'offre
+            Voir l’offre
           </Link>
         </div>
       </div>

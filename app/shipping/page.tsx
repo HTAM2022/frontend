@@ -63,7 +63,7 @@ export default function ShippingPage() {
                 <p className="text-bodyGray leading-relaxed">
                   Nous travaillons avec des transporteurs fiables pour que votre colis vous parvienne
                   partout au Maroc. Notre équipe vous indiquera le transporteur exact et le point de
-                  retrait pour votre ville lors de l'appel de confirmation.
+                  retrait pour votre ville lors de l’appel de confirmation.
                 </p>
               </div>
             </div>

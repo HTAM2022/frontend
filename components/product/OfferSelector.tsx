@@ -129,7 +129,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
 
       {/* COD trust note */}
       <p className="text-xs text-bodyGray text-center">
-        Payez UNIQUEMENT à la livraison. Nous confirmons par téléphone avant l'envoi.
+        Payez UNIQUEMENT à la livraison. Nous confirmons par téléphone avant l’envoi.
       </p>
 
       {/* CTA */}
