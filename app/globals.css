@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sora: var(--font-sora);
-  --font-inter: var(--font-inter);
+  --font-cairo: var(--font-cairo);
+  --font-sora: var(--font-cairo);
+  --font-inter: var(--font-cairo);
   --color-emerald: #0F5C4A;
   --color-deepEmerald: #073B31;
   --color-softMint: #E8F4EF;
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-cairo), "Segoe UI", Tahoma, sans-serif;
 }
 
 h1,
@@ -34,5 +35,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sora), Arial, sans-serif;
+  font-family: var(--font-cairo), "Segoe UI", Tahoma, sans-serif;
+  font-weight: 800;
+}
+
+/* RTL adjustments — flip Lucide icons that convey direction */
+[dir="rtl"] .lucide-arrow-right,
+[dir="rtl"] .lucide-chevron-right {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .lucide-arrow-left,
+[dir="rtl"] .lucide-chevron-left {
+  transform: scaleX(-1);
 }

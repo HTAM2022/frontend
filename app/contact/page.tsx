@@ -17,9 +17,9 @@ export default function ContactPage() {
     <div className="bg-white min-h-[60vh]">
       <section className="bg-gradient-to-b from-cream to-white py-14 border-b border-border">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h1 className="font-sora font-bold text-ink text-4xl mb-3">Contact</h1>
+          <h1 className="font-cairo font-bold text-ink text-4xl mb-3">تواصل معنا</h1>
           <p className="text-bodyGray text-base">
-            Une question sur une commande ou un produit ? Nous sommes là pour vous aider.
+            عندك سؤال على طلبية ولا منتج؟ حنا هنا باش نساعدوك.
           </p>
         </div>
       </section>
@@ -27,36 +27,35 @@ export default function ContactPage() {
       <section className="py-14">
         <div className="max-w-2xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10">
-            {/* Form */}
             <div>
-              <h2 className="font-sora font-semibold text-ink text-xl mb-5">Envoyer un message</h2>
+              <h2 className="font-cairo font-semibold text-ink text-xl mb-5">سيفط رسالة</h2>
 
               {submitted ? (
                 <div className="bg-softMint border border-emerald/30 rounded-xl p-6 flex flex-col items-center text-center gap-3">
                   <CheckCircle2 size={40} className="text-emerald" />
-                  <p className="font-sora font-bold text-ink text-lg">Message reçu</p>
+                  <p className="font-cairo font-bold text-ink text-lg">توصلات الرسالة</p>
                   <p className="text-bodyGray text-sm">
-                    Merci de nous avoir contactés. Notre équipe vous répondra depuis{" "}
+                    شكرا. الفريق ديالنا غادي يجاوبك من{" "}
                     <span className="font-semibold">{SITE.supportEmail}</span>.
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", message: "" }) }}
                     className="text-emerald text-sm font-semibold hover:underline"
                   >
-                    Envoyer un autre message
+                    سيفط رسالة أخرى
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-1">
                     <label htmlFor="contact-name" className="block text-sm font-medium text-ink">
-                      Nom <span className="text-red-500">*</span>
+                      الاسم <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="contact-name"
                       type="text"
                       required
-                      placeholder="Votre nom complet"
+                      placeholder="الاسم الكامل ديالك"
                       value={form.name}
                       onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50"
@@ -65,12 +64,12 @@ export default function ContactPage() {
 
                   <div className="space-y-1">
                     <label htmlFor="contact-phone" className="block text-sm font-medium text-ink">
-                      Numéro de téléphone
+                      رقم التيليفون
                     </label>
                     <input
                       id="contact-phone"
                       type="tel"
-                      placeholder="06XX XXX XXX"
+                      placeholder="06XXXXXXXX"
                       value={form.phone}
                       onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50"
@@ -79,13 +78,13 @@ export default function ContactPage() {
 
                   <div className="space-y-1">
                     <label htmlFor="contact-message" className="block text-sm font-medium text-ink">
-                      Message <span className="text-red-500">*</span>
+                      الرسالة <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="contact-message"
                       rows={5}
                       required
-                      placeholder="Dites-nous en quoi nous pouvons vous aider…"
+                      placeholder="قول لينا فـ آش نقدرو نساعدوك…"
                       value={form.message}
                       onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                       className="w-full px-4 py-3 rounded-lg border border-border text-ink text-sm outline-none focus:ring-2 focus:ring-emerald focus:border-emerald placeholder:text-bodyGray/50 resize-none"
@@ -94,19 +93,18 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-emerald text-white font-sora font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors"
+                    className="w-full bg-emerald text-white font-cairo font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors"
                   >
-                    Envoyer le message
+                    سيفط الرسالة
                   </button>
                 </form>
               )}
             </div>
 
-            {/* Contact info */}
             <div className="space-y-6">
-              <h2 className="font-sora font-semibold text-ink text-xl mb-1">Contactez-nous directement</h2>
+              <h2 className="font-cairo font-semibold text-ink text-xl mb-1">اتصل بينا مباشرة</h2>
               <p className="text-bodyGray text-sm">
-                Notre équipe est disponible pour répondre à vos questions sur les commandes, produits et livraisons.
+                الفريق ديالنا متوفر باش يجاوب على أسئلتك على الطلبيات، المنتجات والتوصيل.
               </p>
 
               <div className="space-y-4">
@@ -115,7 +113,7 @@ export default function ContactPage() {
                     <Mail size={18} className="text-emerald" />
                   </div>
                   <div>
-                    <p className="text-xs text-bodyGray mb-0.5">Email</p>
+                    <p className="text-xs text-bodyGray mb-0.5">الإيمايل</p>
                     <a
                       href={`mailto:${SITE.supportEmail}`}
                       className="text-ink font-medium text-sm hover:text-emerald transition-colors"
@@ -131,7 +129,7 @@ export default function ContactPage() {
                       <Phone size={18} className="text-emerald" />
                     </div>
                     <div>
-                      <p className="text-xs text-bodyGray mb-0.5">Téléphone</p>
+                      <p className="text-xs text-bodyGray mb-0.5">التيليفون</p>
                       <a
                         href={`tel:${SITE.supportPhone}`}
                         className="text-ink font-medium text-sm hover:text-emerald transition-colors"
@@ -145,9 +143,8 @@ export default function ContactPage() {
 
               <div className="bg-softMint rounded-xl p-4 border border-emerald/20">
                 <p className="text-sm text-bodyGray leading-relaxed">
-                  <span className="font-semibold text-ink">Note :</span> Si vous avez déjà passé une
-                  commande, gardez votre téléphone disponible. Notre équipe vous appellera pour
-                  confirmer avant l’expédition.
+                  <span className="font-semibold text-ink">ملاحظة:</span> إلى طلبتي شي حاجة من قبل،
+                  خلي التيليفون معاك. الفريق ديالنا غادي يعيط ليك باش يأكد قبل الشحن.
                 </p>
               </div>
             </div>

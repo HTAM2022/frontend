@@ -3,23 +3,23 @@ import { Banknote, PhoneCall, MapPin, PackageCheck } from "lucide-react"
 const TRUST_ITEMS = [
   {
     Icon: Banknote,
-    title: "Paiement à la livraison",
-    desc: "Aucun paiement à l'avance. Payez uniquement quand la commande arrive.",
+    title: "الدفع عند التوصيل",
+    desc: "بلا خلاص من قبل. كتخلص غير ملي كتوصلك الطلبية للدار.",
   },
   {
     Icon: PhoneCall,
-    title: "Confirmation par téléphone",
-    desc: "Notre équipe appelle pour vérifier votre commande avant l'envoi. Aucune surprise.",
+    title: "تأكيد بالتيليفون",
+    desc: "الفريق ديالنا كيعيط ليك باش يأكد قبل الشحن. بلا مفاجآت.",
   },
   {
     Icon: MapPin,
-    title: "Livraison partout au Maroc",
-    desc: "Nous livrons dans tout le Maroc. Couverture confirmée lors de l'appel.",
+    title: "توصيل لكل المغرب",
+    desc: "كنسيفطو لكل المدن المغربية. التغطية مؤكدة فـ العيطة.",
   },
   {
     Icon: PackageCheck,
-    title: "Packs avantageux",
-    desc: "Commandez 2 ou 3 pièces et économisez par unité. Idéal pour toute la famille.",
+    title: "ضمان 6 شهور",
+    desc: "كل الآلات ضمان 6 شهور ضد عيوب الصناعة. راحة تامة.",
   },
 ]
 
@@ -34,7 +34,7 @@ export function TrustStrip() {
                 <Icon size={22} className="text-emerald" />
               </div>
               <div>
-                <h3 className="font-sora font-semibold text-ink text-sm mb-1">{title}</h3>
+                <h3 className="font-cairo font-semibold text-ink text-sm mb-1">{title}</h3>
                 <p className="text-bodyGray text-xs leading-relaxed">{desc}</p>
               </div>
             </div>

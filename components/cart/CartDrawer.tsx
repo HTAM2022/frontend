@@ -74,15 +74,15 @@ export function CartDrawer() {
         role="dialog"
         aria-modal="true"
         aria-label="Shopping cart"
-        className={`fixed top-0 right-0 h-full z-50 bg-white flex flex-col transition-transform duration-300 ease-in-out w-full sm:w-[420px] shadow-2xl ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 h-full z-50 bg-white flex flex-col transition-transform duration-300 ease-in-out w-full sm:w-[420px] shadow-2xl ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-border shrink-0">
           <div className="flex items-center gap-2">
             <ShoppingCart size={18} className="text-emerald" />
-            <h2 className="font-sora font-bold text-ink text-base">Votre Panier</h2>
+            <h2 className="font-cairo font-bold text-ink text-base">السلة ديالك</h2>
           </div>
           <button
             onClick={closeDrawer}
@@ -100,9 +100,9 @@ export function CartDrawer() {
               <div className="w-16 h-16 rounded-full bg-softMint flex items-center justify-center mb-4">
                 <ShoppingCart size={28} className="text-emerald" />
               </div>
-              <p className="font-sora font-semibold text-ink text-base mb-2">Votre panier est vide</p>
+              <p className="font-cairo font-semibold text-ink text-base mb-2">السلة ديالك خاوية</p>
               <p className="text-sm text-bodyGray max-w-[240px]">
-                Choisissez un produit de sécurité ou d’éclairage pour commencer.
+                اختار باك ديال آلات باش تبدا.
               </p>
             </div>
           ) : (
@@ -134,7 +134,7 @@ export function CartDrawer() {
               {crossSells.length > 0 && (
                 <div className="mt-4">
                   <p className="text-xs font-semibold text-bodyGray uppercase tracking-wider mb-1">
-                    Complétez votre commande
+                    كمل الطلبية ديالك
                   </p>
                   <div>
                     {crossSells.map((p) => (
@@ -163,24 +163,24 @@ export function CartDrawer() {
           <div className="shrink-0 px-5 pb-6 pt-4 border-t border-border bg-white">
             <button
               onClick={handleCheckout}
-              className="w-full bg-emerald text-white font-sora font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors active:scale-[0.98]"
+              className="w-full bg-emerald text-white font-cairo font-bold text-base py-4 rounded-xl hover:bg-deepEmerald transition-colors active:scale-[0.98]"
             >
-              Commander — Paiement à la livraison
+              اطلب — الدفع عند التوصيل
             </button>
 
             {/* Trust badges */}
             <div className="flex items-center justify-between mt-4 gap-2">
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <ShieldCheck size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">Paiement livraison</span>
+                <span className="text-xs">دفع عند التوصيل</span>
               </div>
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <Phone size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">Appel confirmation</span>
+                <span className="text-xs">تأكيد بالتيليفون</span>
               </div>
               <div className="flex items-center gap-1.5 text-bodyGray">
                 <Package size={14} className="text-emerald shrink-0" />
-                <span className="text-xs">Packs avantageux</span>
+                <span className="text-xs">ضمان 6 شهور</span>
               </div>
             </div>
           </div>

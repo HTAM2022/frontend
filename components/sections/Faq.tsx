@@ -11,7 +11,7 @@ type Props = {
   title?: string
 }
 
-export function Faq({ faqs, title = "Questions fréquentes" }: Props) {
+export function Faq({ faqs, title = "أسئلة شائعة" }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   function toggle(i: number) {
@@ -21,7 +21,7 @@ export function Faq({ faqs, title = "Questions fréquentes" }: Props) {
   return (
     <section id="faq" className="py-16 bg-white">
       <div className="max-w-2xl mx-auto px-4">
-        <h2 className="font-sora font-bold text-ink text-3xl mb-8 text-center">{title}</h2>
+        <h2 className="font-cairo font-bold text-ink text-3xl mb-8 text-center">{title}</h2>
 
         <div className="divide-y divide-border border border-border rounded-2xl overflow-hidden">
           {faqs.map((item, i) => {

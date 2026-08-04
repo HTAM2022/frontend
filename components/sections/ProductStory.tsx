@@ -7,19 +7,19 @@ interface ProductStoryProps {
 }
 
 const DEFAULT_STORY = {
-  painBadge: "La Réalité Marocaine",
-  painTitle: "Conçu pour les vrais problèmes des familles marocaines.",
+  painBadge: "الواقع ديال المهنة",
+  painTitle: "مصمم للحرفي المغربي الحقيقي.",
   painCopy1:
-    "Coupures de courant, portails sombres, rentrées à pied non sûres — certains problèmes ont des solutions simples et pratiques qui changent la vie.",
-  painCopy2: "Ce produit a été choisi car il résout directement ce problème, sans gadget inutile.",
-  painPromise: "Des outils simples. Une vraie tranquillité d'esprit.",
-  scienceBadge: "Fait pour durer",
-  scienceTitle: "Conçu pour les conditions marocaines.",
+    "الخدمة كتحتاج آلات مزيانة، وكل واحد عندو بلاصتو. حنا كنجيبو ليك الأصلي بـ ثمن أرخص.",
+  painCopy2: "الباك هذا خيرناه لأنه كيحل مشكل حقيقي، بلا زيادة ديال أشياء ما كتنفعش.",
+  painPromise: "أدوات بسيطة. راحة تامة.",
+  scienceBadge: "مصمم باش يدوم",
+  scienceTitle: "جودة تدوم سنين.",
   scienceCopy:
-    "Chaque produit de notre gamme est sélectionné pour sa durabilité, sa sécurité et son usage réel — pas pour des specs vides.",
+    "كل الآلات مختارة على أساس الجودة والدوام، ماشي غير على الورقة ديال المواصفات.",
   scienceBullets: [
-    { title: "Composants de qualité", body: "Pièces améliorées choisies pour résister à l'usage quotidien." },
-    { title: "Design pratique", body: "Simple à utiliser, facile à entretenir, prêt quand vous en avez besoin." },
+    { title: "قطع أصلية", body: "أفضل المواد باش تدوم على استعمال يومي." },
+    { title: "تصميم عملي", body: "سهل للاستعمال، سهل للصيانة، جاهز فايما تحتاجو." },
   ],
 }
 
@@ -53,7 +53,7 @@ export function ProductStory({ product }: ProductStoryProps) {
               <Zap className="w-4 h-4" />
               {story.painBadge}
             </div>
-            <h2 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight">
+            <h2 className="font-cairo font-bold text-3xl md:text-4xl text-ink leading-tight">
               {story.painTitle}
             </h2>
             <p className="text-lg text-bodyGray leading-relaxed">{story.painCopy1}</p>
@@ -89,7 +89,7 @@ export function ProductStory({ product }: ProductStoryProps) {
               <ShieldCheck className="w-4 h-4" />
               {story.scienceBadge}
             </div>
-            <h2 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight">
+            <h2 className="font-cairo font-bold text-3xl md:text-4xl text-ink leading-tight">
               {story.scienceTitle}
             </h2>
             <p className="text-lg text-bodyGray leading-relaxed">{story.scienceCopy}</p>
@@ -100,7 +100,7 @@ export function ProductStory({ product }: ProductStoryProps) {
                     <BadgeCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="text-ink font-sora block text-lg">{b.title}</strong>
+                    <strong className="text-ink font-cairo block text-lg">{b.title}</strong>
                     <span className="text-bodyGray">{b.body}</span>
                   </div>
                 </li>
@@ -129,21 +129,21 @@ export function ProductStory({ product }: ProductStoryProps) {
           <div className="w-full md:w-1/2 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-cream border border-warmGold text-[#92400E] rounded-full text-xs font-bold tracking-wide uppercase">
               <BadgeCheck className="w-4 h-4" />
-              100% sans risque
+              100% بلا مخاطر
             </div>
-            <h2 className="font-sora font-bold text-3xl md:text-4xl text-ink leading-tight">
-              Garantie 30 jours satisfait ou remboursé.
+            <h2 className="font-cairo font-bold text-3xl md:text-4xl text-ink leading-tight">
+              ضمان 6 شهور — راضي ولا نرجعو ليك الفلوس.
             </h2>
             <p className="text-lg text-bodyGray leading-relaxed">
-              Nous sommes tellement sûrs du {product.englishName} que nous offrons une garantie complète de 30 jours. S’il ne fonctionne pas comme décrit, nous le remplaçons — sans aucune question.
+              حنا واثقين فـ {product.englishName} — لهذا كنعطيوك ضمان 6 شهور كاملة. إلى ما خدماتش بحال ما قلنا ليك، نبدلوها ليك — بلا أسئلة.
             </p>
             <div className="bg-cream p-5 rounded-2xl border border-warmGold/30">
-              <h4 className="font-sora font-bold text-ink mb-2 flex items-center gap-2">
+              <h4 className="font-cairo font-bold text-ink mb-2 flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-warmGold" />
-                Notre engagement
+                الوعد ديالنا
               </h4>
               <p className="text-sm text-bodyGray leading-relaxed">
-                RafaTools est une marque conçue pour le Maroc. Chaque produit est livré avec un vrai support client, une confirmation par téléphone avant l’expédition, et le paiement à la livraison. Commandez aujourd’hui, testez vous-même, et ne payez qu’à la réception.
+                RafaTools ماركة مصممة للحرفي المغربي. كل باك كيتسيفط مع دعم حقيقي، تأكيد بالتيليفون قبل الشحن، والدفع عند التوصيل. اطلب اليوم، جرب براسك، وخلص غير ملي توصلك الطلبية.
               </p>
             </div>
           </div>

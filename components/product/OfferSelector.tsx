@@ -41,10 +41,9 @@ export function OfferSelector({ product }: OfferSelectorProps) {
   }
 
   return (
-    <div className="min-w-0 space-y-5 text-left">
-      <p className="text-sm font-semibold text-charcoal">Choisissez votre pack :</p>
+    <div className="min-w-0 space-y-5 text-right">
+      <p className="text-sm font-semibold text-charcoal">اختار الباك ديالك:</p>
 
-      {/* Offer cards */}
       <div className="space-y-3">
         {productOffers.map((offer) => {
           const isSelected = offer.quantity === selectedQty
@@ -56,7 +55,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
               key={offer.quantity}
               onClick={() => setSelectedQty(product.id, offer.quantity as 1 | 2 | 3)}
               className={cn(
-                "w-full min-w-0 text-left border rounded-2xl p-4 transition-all duration-200 relative",
+                "w-full min-w-0 text-right border rounded-2xl p-4 transition-all duration-200 relative",
                 isSelected
                   ? "border-emerald bg-softMint/60 ring-2 ring-emerald shadow-sm"
                   : "border-border bg-white hover:border-emerald/50 hover:bg-softMint/20",
@@ -64,11 +63,10 @@ export function OfferSelector({ product }: OfferSelectorProps) {
               aria-pressed={isSelected}
             >
               {isSelected && (
-                <div className="absolute top-0 left-0 w-1 h-full bg-emerald rounded-l-2xl" />
+                <div className="absolute top-0 right-0 w-1 h-full bg-emerald rounded-r-2xl" />
               )}
               <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex min-w-0 items-start gap-3">
-                  {/* Radio indicator */}
                   <div
                     className={cn(
                       "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors",
@@ -85,26 +83,26 @@ export function OfferSelector({ product }: OfferSelectorProps) {
                       </span>
                     </div>
                     <p className="text-xs text-bodyGray font-medium">
-                      {formatKes(offer.perPieceKes)} par pièce
+                      {formatKes(offer.perPieceKes)} للباك الواحد
                     </p>
                     {offer.savingsKes > 0 && (
                       <p className="text-xs font-bold text-emerald mt-1 bg-emerald/10 inline-block px-2 py-0.5 rounded-md">
-                        Économisez {formatKes(offer.savingsKes)}
+                        كتربح {formatKes(offer.savingsKes)}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="flex flex-col items-start pl-8 text-left sm:flex-shrink-0 sm:items-end sm:pl-0 sm:text-right">
+                <div className="flex flex-col items-start pr-8 text-right sm:flex-shrink-0 sm:items-end sm:pr-0 sm:text-left">
                   <p className="font-bold text-ink text-lg leading-none mb-1.5">
                     {formatKes(offer.priceKes)}
                   </p>
                   <span
                     className={cn(
                       "text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider",
-                      offer.badge === "Meilleure Offre"
+                      offer.badge === "أحسن ثمن"
                         ? "bg-emerald text-white"
-                        : offer.badge === "Le Plus Pratique"
+                        : offer.badge === "الأكثر طلبا"
                           ? "bg-warmGold text-white"
                           : "bg-border text-bodyGray",
                     )}
@@ -118,27 +116,16 @@ export function OfferSelector({ product }: OfferSelectorProps) {
         })}
       </div>
 
-      {/* Free-gift teaser */}
-      <div className="rounded-xl border border-warmGold/40 bg-cream/60 px-3 py-2 flex items-center gap-2">
-        <span className="text-lg leading-none">🎁</span>
-        <p className="text-xs text-ink">
-          <span className="font-bold text-warmGold">Achetez 4 pièces ou plus</span> et recevez une{" "}
-          <span className="font-semibold">Lampe Camping Solaire + Ventilateur GRATUITE</span> (valeur 199 DH)
-        </p>
-      </div>
-
-      {/* COD trust note */}
       <p className="text-xs text-bodyGray text-center">
-        Payez UNIQUEMENT à la livraison. Nous confirmons par téléphone avant l’envoi.
+        كتخلص غير ملي كتوصلك الطلبية. كنعيطو باش نأكدو قبل الشحن.
       </p>
 
-      {/* CTA */}
       <div>
         <button
           onClick={handleAddToCart}
           className="w-full bg-emerald text-white py-4 px-4 rounded-xl font-bold text-lg hover:bg-deepEmerald transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
-          Ajouter au panier — Paiement à la livraison
+          زيد للسلة — الدفع عند التوصيل
         </button>
       </div>
     </div>

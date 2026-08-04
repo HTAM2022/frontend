@@ -7,10 +7,10 @@ import { useCartStore } from "@/store/cart-store"
 import { MobileMenu } from "./MobileMenu"
 
 const NAV_LINKS = [
-  { href: "/", label: "Accueil" },
-  { href: "/collections", label: "Boutique" },
-  { href: "/about", label: "À propos" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "الرئيسية" },
+  { href: "/collections", label: "المنتجات" },
+  { href: "/about", label: "من نحن" },
+  { href: "/contact", label: "اتصل بنا" },
 ]
 
 export function Header() {
@@ -35,18 +35,16 @@ export function Header() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-9 h-9 rounded-full bg-emerald flex items-center justify-center">
-              <span className="text-white font-sora font-bold text-base leading-none">R</span>
+              <span className="text-white font-cairo font-bold text-base leading-none">R</span>
             </div>
             <div className="leading-tight">
-              <div className="font-sora font-bold text-ink text-[15px]">RafaTools</div>
-              <div className="text-bodyGray text-[11px] leading-none">Éclairage &amp; Sécurité</div>
+              <div className="font-cairo font-bold text-ink text-[15px]">RafaTools</div>
+              <div className="text-bodyGray text-[11px] leading-none">أدوات احترافية</div>
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map((link) => (
               <Link
@@ -59,16 +57,15 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right actions */}
           <div className="flex items-center gap-2">
             <button
               onClick={openDrawer}
               className="relative p-2.5 rounded-lg hover:bg-softMint transition-colors"
-              aria-label={`Ouvrir le panier, ${itemCount} articles`}
+              aria-label={`فتح السلة، ${itemCount} منتج`}
             >
               <ShoppingCart size={22} className="text-ink" />
               {itemCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] bg-emerald text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1">
+                <span className="absolute -top-0.5 -left-0.5 min-w-[18px] h-[18px] bg-emerald text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1">
                   {itemCount}
                 </span>
               )}
@@ -76,7 +73,7 @@ export function Header() {
             <button
               onClick={() => setMobileOpen(true)}
               className="md:hidden p-2.5 rounded-lg hover:bg-softMint transition-colors"
-              aria-label="Ouvrir le menu"
+              aria-label="فتح القائمة"
             >
               <Menu size={22} className="text-ink" />
             </button>

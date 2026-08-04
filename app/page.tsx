@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Zap, Shield, Clock, Building2 } from "lucide-react"
+import { Zap, Shield, Clock, Wrench } from "lucide-react"
 import { Hero } from "@/components/sections/Hero"
 import { TrustStrip } from "@/components/sections/TrustStrip"
 import { CodProcess } from "@/components/sections/CodProcess"
@@ -10,31 +10,31 @@ import { PRODUCTS } from "@/data/products"
 import { HOME_FAQS } from "@/data/site"
 
 export const metadata: Metadata = {
-  title: "RafaTools – Ampoules de Secours, Éclairage Solaire & Alarmes Personnelles | Maroc",
+  title: "RafaTools – باكات آلات DeWalt و Makita احترافية | المغرب",
   description:
-    "Ampoules LED rechargeables, projecteurs solaires 1500LM et alarmes personnelles 130dB pour les foyers marocains. Paiement à la livraison.",
+    "باكات آلات كهربائية احترافية DeWalt و Makita بـ الدفع عند التوصيل. فيسوز، ميلوز، مرطو، منشار. ضمان 6 شهور.",
 }
 
 const WHY_REASONS = [
   {
-    Icon: Zap,
-    title: "Conçus pour le Maroc",
-    desc: "Produits sélectionnés pour les coupures ONEE, les besoins de sécurité nocturne et les réalités du terrain marocain.",
+    Icon: Wrench,
+    title: "آلات أصلية 100%",
+    desc: "DeWalt و Makita أصلية بضمان 6 شهور — نفس الجودة ديال الوكيل الرسمي ولكن بـ ثمن أرخص.",
   },
   {
     Icon: Shield,
-    title: "Commande sans risque",
-    desc: "100% paiement à la livraison. Vous ne payez que lorsque la commande est entre vos mains.",
+    title: "طلب بلا مخاطر",
+    desc: "100% الدفع عند التوصيل. ما كتخلص والو حتى توصلك الطلبية للدار وتفتح الكرطونة.",
   },
   {
     Icon: Clock,
-    title: "Confirmé avant expédition",
-    desc: "Notre équipe appelle chaque client avant l'envoi. Aucune erreur, aucune fausse livraison.",
+    title: "تأكيد قبل الشحن",
+    desc: "الفريق ديالنا كيعيط لكل زبون قبل ما نسيفطو الطلبية. بلا غلطات، بلا مشاكل.",
   },
   {
-    Icon: Building2,
-    title: "Maison, boutique et famille",
-    desc: "Solutions pour chambres, comptoirs de boutique, cours, salons — et pour les femmes qui rentrent le soir.",
+    Icon: Zap,
+    title: "للحرفيين والمحترفين",
+    desc: "نجارين، حدادين، معلمين البناء، ميكانيسيان، صنايعية الدار — كل واحد كيلقى الباك المناسب.",
   },
 ]
 
@@ -44,31 +44,27 @@ export default function HomePage() {
       <Hero />
       <TrustStrip />
 
-      {/* Problem agitation */}
       <section className="bg-charcoal text-white py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-sora font-bold text-2xl md:text-3xl mb-5 leading-snug">
-            Le courant coupe sans prévenir. Les cours restent dans le noir. Et rentrer seul(e) le soir n’est pas toujours sûr.
+          <h2 className="font-cairo font-bold text-2xl md:text-3xl mb-5 leading-snug">
+            الآلات الرخيصة كتخسر بسرعة. الأصلية غالية بزاف. الحل: باكات RafaTools.
           </h2>
           <p className="text-white/70 text-base leading-relaxed mb-6">
-            Quand le courant coupe, vous restez dans le noir – littéralement. Les enfants ne peuvent
-            pas finir leurs devoirs. Les boutiques perdent des clients. La nuit, un portail sombre
-            invite les problèmes, et aucune femme rentrant du travail ne devrait se sentir seule.
+            كل صنايعي عارف — ملي كتخدم بآلة رخيصة، كتخسر فـ شي شهور. وملي كتشري من الوكيل، الثمن كيقتل الجيب.
+            حنا كنجيبو آلات DeWalt و Makita أصلية مباشرة، بلا وسطاء، بـ باكات كاملة.
           </p>
           <p className="text-white/90 font-semibold text-base">
-            RafaTools résout ces trois problèmes avec des produits pratiques, abordables et
-            disponibles en paiement à la livraison.
+            جودة المحترفين، بـ ثمن يعجبك، مع الدفع عند التوصيل — بلا مخاطر.
           </p>
         </div>
       </section>
 
-      {/* Product collection */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Nos Produits</h2>
+            <h2 className="font-cairo font-bold text-ink text-3xl mb-3">الباكات ديالنا</h2>
             <p className="text-bodyGray text-base max-w-lg mx-auto">
-              Trois solutions ciblées : coupures de courant, sécurité de la maison et sécurité personnelle.
+              3 باكات احترافية: للحرفي البادئ، للمحترف، وللمقاول الكبير.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -79,13 +75,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why RafaTools */}
       <section className="bg-softMint py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="font-sora font-bold text-ink text-3xl mb-3">Pourquoi RafaTools</h2>
+            <h2 className="font-cairo font-bold text-ink text-3xl mb-3">علاش RafaTools</h2>
             <p className="text-bodyGray text-base">
-              Pratique, honnête et conçu pour la vie quotidienne au Maroc.
+              أدوات احترافية، بـ ثمن معقول، ومصممة للحرفي المغربي.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -95,7 +90,7 @@ export default function HomePage() {
                   <Icon size={20} className="text-emerald" />
                 </div>
                 <div>
-                  <h3 className="font-sora font-semibold text-ink text-sm mb-1">{title}</h3>
+                  <h3 className="font-cairo font-semibold text-ink text-sm mb-1">{title}</h3>
                   <p className="text-bodyGray text-sm leading-relaxed">{desc}</p>
                 </div>
               </div>

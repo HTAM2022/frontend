@@ -5,10 +5,10 @@ import Link from "next/link"
 import { X } from "lucide-react"
 
 const NAV_LINKS = [
-  { href: "/", label: "Accueil" },
-  { href: "/collections", label: "Boutique" },
-  { href: "/about", label: "À propos" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "الرئيسية" },
+  { href: "/collections", label: "المنتجات" },
+  { href: "/about", label: "من نحن" },
+  { href: "/contact", label: "اتصل بنا" },
 ]
 
 type Props = {
@@ -39,11 +39,11 @@ export function MobileMenu({ isOpen, onClose }: Props) {
       />
       <div className="absolute top-0 left-0 right-0 bg-white shadow-xl">
         <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-          <span className="font-sora font-bold text-emerald text-lg">RafaTools</span>
+          <span className="font-cairo font-bold text-emerald text-lg">RafaTools</span>
           <button
             onClick={onClose}
             className="p-2 rounded-lg text-bodyGray hover:text-ink hover:bg-softMint transition-colors"
-            aria-label="Fermer le menu"
+            aria-label="إغلاق القائمة"
           >
             <X size={22} />
           </button>
@@ -62,7 +62,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
         </nav>
         <div className="px-6 py-4 bg-softMint">
           <p className="text-sm text-bodyGray">
-            <span className="font-semibold text-emerald">100% COD</span> – Payez uniquement à la livraison.
+            <span className="font-semibold text-emerald">100% الدفع عند التوصيل</span> — كتخلص غير ملي كتوصلك.
           </p>
         </div>
       </div>

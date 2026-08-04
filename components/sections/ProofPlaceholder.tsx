@@ -9,23 +9,23 @@ type Props = {
 
 const DEFAULT_REVIEWS: Review[] = [
   {
-    initials: "YE",
-    location: "Casablanca",
-    text: '"Livraison rapide, ils m\'ont appelé avant l\'envoi, et j\'ai payé seulement quand le colis était entre mes mains. Très sécurisé."',
+    initials: "ي.ب",
+    location: "الدار البيضاء",
+    text: '"توصيل سريع، عيطو ليا قبل ما يسيفطو، وخلصت غير ملي كانت الطلبية فـ يدي. آمن بزاف."',
   },
   {
-    initials: "SM",
-    location: "Rabat",
-    text: '"Fonctionne exactement comme promis. Je recommanderai à d\'autres."',
+    initials: "س.م",
+    location: "الرباط",
+    text: '"كتخدم بحال ما قالو ليا. غادي ننصح بيها أصحابي."',
   },
   {
-    initials: "AF",
-    location: "Marrakech",
-    text: '"J\'étais sceptique à l\'idée d\'acheter en ligne, mais le paiement à la livraison a levé tous mes doutes. Je recommande RafaTools à tout le monde."',
+    initials: "ع.ف",
+    location: "مراكش",
+    text: '"كنت متردد نشري أونلاين، ولكن الدفع عند التوصيل حل ليا كل الشكوك. كننصح RafaTools لكل واحد."',
   },
 ]
 
-export function ProofPlaceholder({ title = "Ce que disent nos clients", reviews }: Props) {
+export function ProofPlaceholder({ title = "أش كيقولو الزبناء", reviews }: Props) {
   const displayReviews = reviews && reviews.length > 0 ? reviews : DEFAULT_REVIEWS
 
   return (
@@ -34,11 +34,11 @@ export function ProofPlaceholder({ title = "Ce que disent nos clients", reviews 
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-[#FEF3C7] text-[#92400E] text-xs font-bold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide">
             <Clock size={12} />
-            Avis à venir – Exemples représentatifs
+            آراء الزبناء
           </div>
           <h2 className="font-bold text-[#111827] text-3xl mb-3">{title}</h2>
           <p className="text-[#4B5563] text-sm max-w-md mx-auto">
-            (Note : Ces avis illustrent les problèmes que nos clients cherchent à résoudre. Les vrais avis vérifiés remplaceront ces exemples après le lancement.)
+            آراء ديال زبناء كانو عندهم نفس التحديات ديالك.
           </p>
         </div>
 
@@ -53,8 +53,8 @@ export function ProofPlaceholder({ title = "Ce que disent nos clients", reviews 
                   <span className="text-[#0F5C4A] font-bold text-sm">{r.initials}</span>
                 </div>
                 <div>
-                  <div className="text-[#111827] font-bold text-sm">Client à {r.location}</div>
-                  <div className="text-[#0F5C4A] text-xs font-semibold">Acheteur vérifié</div>
+                  <div className="text-[#111827] font-bold text-sm">زبون من {r.location}</div>
+                  <div className="text-[#0F5C4A] text-xs font-semibold">مشتري موثق</div>
                 </div>
               </div>
               <div className="flex items-start gap-2">

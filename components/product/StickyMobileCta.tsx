@@ -53,7 +53,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
                 : "bg-[#E8F4EF]/40 text-[#4B5563] border-[#E5E7EB]"
             }`}
           >
-            {offer.quantity}pc
+            {offer.quantity} باك
           </button>
         ))}
       </div>
@@ -61,7 +61,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
       <div className="flex items-center gap-3">
         <div>
           <p className="text-[10px] text-[#4B5563] font-bold uppercase tracking-wider leading-none mb-0.5">
-            Total
+            المجموع
           </p>
           <p className="font-bold text-[#111827] text-sm">{formatKes(selectedOffer.priceKes)}</p>
         </div>
@@ -70,7 +70,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
           className="flex-1 bg-[#0F5C4A] text-white py-3 rounded-xl font-bold text-sm hover:bg-[#073B31] transition-colors flex items-center justify-center gap-2 shadow-md"
         >
           <ShoppingCart className="w-4 h-4" />
-          Ajouter — COD
+زيد — الدفع عند التوصيل
         </button>
       </div>
     </div>

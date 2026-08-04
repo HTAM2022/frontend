@@ -17,16 +17,15 @@ export function CartItemRow({ cartItemId, name, offerQuantity, totalPriceKes, bu
 
   return (
     <div className="flex items-start gap-3 py-3">
-      {/* Quantity badge */}
       <div className="shrink-0 w-10 h-10 rounded-lg bg-softMint flex items-center justify-center">
-        <span className="font-sora font-bold text-emerald text-base leading-none">{offerQuantity}</span>
+        <span className="font-cairo font-bold text-emerald text-base leading-none">{offerQuantity}</span>
       </div>
 
       <div className="flex-1 min-w-0">
         <p className="font-medium text-ink text-sm leading-snug truncate">{name}</p>
         {bundleLabel && <p className="text-xs text-bodyGray mt-0.5">{bundleLabel}</p>}
         <p className="text-xs text-bodyGray mt-0.5">
-          {offerQuantity} {offerQuantity === 1 ? "pièce" : "pièces"}
+          {offerQuantity} {offerQuantity === 1 ? "باك" : "باكات"}
         </p>
       </div>
 
@@ -35,7 +34,7 @@ export function CartItemRow({ cartItemId, name, offerQuantity, totalPriceKes, bu
         <button
           onClick={() => removeItem(cartItemId)}
           className="text-bodyGray hover:text-red-500 transition-colors"
-          aria-label="Retirer l'article"
+          aria-label="حذف المنتج"
         >
           <X size={15} />
         </button>

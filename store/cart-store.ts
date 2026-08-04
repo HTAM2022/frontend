@@ -42,7 +42,7 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: "rafa-cart",
-      version: 3,
+      version: 4,
       migrate: () => ({
         items: [],
         isDrawerOpen: false,
