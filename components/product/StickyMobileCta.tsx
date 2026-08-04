@@ -7,6 +7,7 @@ import { formatKes } from "@/lib/money"
 import { addToCartId } from "@/lib/event-id"
 import { trackAddToCart } from "@/lib/tracking"
 import { useCartStore } from "@/store/cart-store"
+import { useCheckoutStore } from "@/store/checkout-store"
 import { useOfferStore } from "@/store/offer-store"
 
 interface StickyMobileCtaProps {
@@ -17,7 +18,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
   const selectedQty = useOfferStore((s) => s.getQuantity(product.id, product.defaultOfferQuantity))
   const setSelectedQty = useOfferStore((s) => s.setQuantity)
   const addItem = useCartStore((s) => s.addItem)
-  const openDrawer = useCartStore((s) => s.openDrawer)
+  const openCheckout = useCheckoutStore((s) => s.openCheckout)
 
   const productOffers = getOffersForProduct(product.basePriceKes)
   const selectedOffer = productOffers.find((o) => o.quantity === selectedQty) ?? productOffers[0]
@@ -36,7 +37,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
       eventIds: { addToCart: eventId },
     })
     trackAddToCart(product.id, product.englishName, selectedOffer.priceKes, eventId)
-    openDrawer()
+    openCheckout()
   }
 
   return (
@@ -70,7 +71,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
           className="flex-1 bg-[#0F5C4A] text-white py-3 rounded-xl font-bold text-sm hover:bg-[#073B31] transition-colors flex items-center justify-center gap-2 shadow-md"
         >
           <ShoppingCart className="w-4 h-4" />
-زيد — الدفع عند التوصيل
+شري دابا — الدفع عند التوصيل
         </button>
       </div>
     </div>

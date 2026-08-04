@@ -7,6 +7,7 @@ import { formatKes } from "@/lib/money"
 import { addToCartId } from "@/lib/event-id"
 import { trackAddToCart } from "@/lib/tracking"
 import { useCartStore } from "@/store/cart-store"
+import { useCheckoutStore } from "@/store/checkout-store"
 import { useOfferStore } from "@/store/offer-store"
 import { cn } from "@/lib/utils"
 
@@ -18,7 +19,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
   const selectedQty = useOfferStore((s) => s.getQuantity(product.id, product.defaultOfferQuantity))
   const setSelectedQty = useOfferStore((s) => s.setQuantity)
   const addItem = useCartStore((s) => s.addItem)
-  const openDrawer = useCartStore((s) => s.openDrawer)
+  const openCheckout = useCheckoutStore((s) => s.openCheckout)
 
   const productOffers = getOffersForProduct(product.basePriceKes)
   const selectedOffer = productOffers.find((o) => o.quantity === selectedQty) ?? productOffers[0]
@@ -37,7 +38,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
       eventIds: { addToCart: eventId },
     })
     trackAddToCart(product.id, product.englishName, selectedOffer.priceKes, eventId)
-    openDrawer()
+    openCheckout()
   }
 
   return (
@@ -125,7 +126,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
           onClick={handleAddToCart}
           className="w-full bg-emerald text-white py-4 px-4 rounded-xl font-bold text-lg hover:bg-deepEmerald transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
-          زيد للسلة — الدفع عند التوصيل
+          شري دابا — الدفع عند التوصيل
         </button>
       </div>
     </div>
