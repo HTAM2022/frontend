@@ -46,12 +46,9 @@ export const useCartStore = create<CartState>()(
       migrate: () => ({
         items: [],
         isDrawerOpen: false,
-        addItem: () => {},
-        removeItem: () => {},
-        clearCart: () => {},
-        openDrawer: () => {},
-        closeDrawer: () => {},
-        total: () => 0,
+      }),
+      partialize: (state) => ({
+        items: state.items,
       }),
     },
   ),
