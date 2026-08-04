@@ -4,6 +4,7 @@ import "./globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { CartDrawer } from "@/components/cart/CartDrawer"
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat"
 import { PixelProvider } from "@/components/tracking/PixelProvider"
 import { Toaster } from "sonner"
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartDrawer />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
         <Toaster position="top-left" />
       </body>
     </html>
