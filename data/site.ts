@@ -6,9 +6,9 @@ export const SITE = {
   metaTitle: "RafaTools – باكات آلات DeWalt و Makita احترافية | المغرب",
   metaDescription:
     "باكات آلات كهربائية احترافية DeWalt و Makita — فيسوز، ميلوز، مرطو SDS، منشار دائري. الدفع عند التوصيل، ضمان 6 شهور، توصيل لكل المغرب.",
-  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@rafatools.online",
-  supportPhone: process.env.NEXT_PUBLIC_SUPPORT_PHONE ?? "+212786938369",
-  supportWhatsapp: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP ?? "212786938369",
+  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@rafatools.online",
+  supportPhone: process.env.NEXT_PUBLIC_SUPPORT_PHONE || "+212786938369",
+  supportWhatsapp: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP || "212786938369",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rafatools.online",
   apiBaseUrl: process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000",
 }
