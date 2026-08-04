@@ -11,6 +11,13 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // French copy uses many natural apostrophes (l'appel, d'urgence, s'allume, etc.)
+      // that JSX would otherwise flag. Disable the rule since the text is safe.
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
