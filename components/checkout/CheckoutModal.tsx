@@ -15,6 +15,7 @@ import { initiateCheckoutId, purchaseId } from "@/lib/event-id"
 import { trackInitiateCheckout, trackPurchase } from "@/lib/tracking"
 import { createOrder } from "@/lib/api"
 import { PhoneField } from "./PhoneField"
+import { WhatsAppCheckoutButton } from "./WhatsAppCheckoutButton"
 import type { OrderResponse } from "@/types/commerce"
 import { cn } from "@/lib/utils"
 
@@ -285,6 +286,18 @@ export function CheckoutModal() {
             <p className="text-sm text-[#4B5563] text-center mt-3 font-medium">
               الفريق ديالنا غادي يعيط ليك باش يأكد قبل الشحن.
             </p>
+
+            <div className="mt-4">
+              <div className="flex items-center gap-2 my-2">
+                <div className="flex-1 h-px bg-[#E5E7EB]" />
+                <span className="text-[10px] text-[#4B5563] font-semibold uppercase tracking-wider">ولا</span>
+                <div className="flex-1 h-px bg-[#E5E7EB]" />
+              </div>
+              <WhatsAppCheckoutButton items={items} total={cartTotal} variant="checkout" />
+              <p className="text-[11px] text-[#4B5563] text-center mt-2">
+                محتار؟ سوّل الفريق ديالنا مباشرة فـ واتساب
+              </p>
+            </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>

@@ -11,6 +11,7 @@ import { CrossSellCard } from "./CrossSellCard"
 import { CartGiftBanner } from "./CartGiftBanner"
 import { CheckoutModal } from "@/components/checkout/CheckoutModal"
 import { UpsellModal } from "@/components/checkout/UpsellModal"
+import { WhatsAppCheckoutButton } from "@/components/checkout/WhatsAppCheckoutButton"
 import { initiateCheckoutId } from "@/lib/event-id"
 import { trackInitiateCheckout } from "@/lib/tracking"
 
@@ -167,6 +168,18 @@ export function CartDrawer() {
             >
               اطلب — الدفع عند التوصيل
             </button>
+
+            <div className="mt-3">
+              <div className="flex items-center gap-2 my-2">
+                <div className="flex-1 h-px bg-border" />
+                <span className="text-[10px] text-bodyGray font-semibold uppercase tracking-wider">ولا</span>
+                <div className="flex-1 h-px bg-border" />
+              </div>
+              <WhatsAppCheckoutButton items={items} total={total()} variant="cart" />
+              <p className="text-[11px] text-bodyGray text-center mt-2">
+                عندك سؤال؟ سوّلنا فـ واتساب — كنجاوبو بسرعة
+              </p>
+            </div>
 
             {/* Trust badges */}
             <div className="flex items-center justify-between mt-4 gap-2">
