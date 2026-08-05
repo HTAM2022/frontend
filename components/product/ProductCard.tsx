@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Drill, Wrench, Hammer, Package } from "lucide-react"
+import { Drill, Wrench, Hammer, Package, Briefcase } from "lucide-react"
 import type { Product } from "@/types/commerce"
 import { formatKes } from "@/lib/money"
 import { cn } from "@/lib/utils"
@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 const PRODUCT_ICONS: Record<string, React.ElementType> = {
   pack_dewalt_2: Drill,
   pack_makita_4: Wrench,
+  pack_dewalt_4: Briefcase,
   pack_dewalt_5: Hammer,
 }
 

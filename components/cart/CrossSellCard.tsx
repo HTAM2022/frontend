@@ -1,6 +1,6 @@
 "use client"
 
-import { Plus, Drill, Wrench, Hammer, Package } from "lucide-react"
+import { Plus, Drill, Wrench, Hammer, Package, Briefcase } from "lucide-react"
 import { useCartStore } from "@/store/cart-store"
 import { formatKes } from "@/lib/money"
 import { addToCartId } from "@/lib/event-id"
@@ -18,6 +18,7 @@ type Props = {
 const ICONS: Record<string, React.FC<{ size?: number; className?: string }>> = {
   pack_dewalt_2: Drill,
   pack_makita_4: Wrench,
+  pack_dewalt_4: Briefcase,
   pack_dewalt_5: Hammer,
 }
 
