@@ -126,7 +126,7 @@ export function OfferSelector({ product }: OfferSelectorProps) {
           onClick={handleAddToCart}
           className="w-full bg-emerald text-white py-4 px-4 rounded-xl font-bold text-lg hover:bg-deepEmerald transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
-          شري دابا — الدفع عند التوصيل
+          إشتري الآن — الدفع عند التوصيل
         </button>
       </div>
     </div>

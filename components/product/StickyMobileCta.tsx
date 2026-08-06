@@ -71,7 +71,7 @@ export function StickyMobileCta({ product }: StickyMobileCtaProps) {
           className="flex-1 bg-[#0F5C4A] text-white py-3 rounded-xl font-bold text-sm hover:bg-[#073B31] transition-colors flex items-center justify-center gap-2 shadow-md"
         >
           <ShoppingCart className="w-4 h-4" />
-شري دابا — الدفع عند التوصيل
+إشتري الآن — الدفع عند التوصيل
         </button>
       </div>
     </div>
